@@ -1,5 +1,5 @@
 <template>
-	<div class="w-full py-10 flex flex-col">
+	<div class="w-full pt-10 flex flex-col">
 		<div class="flex justify-end">
 			<div class="flex w-100 justify-between">
 				<NuxtLink to="/" class="nav-item">首页</NuxtLink>
@@ -12,7 +12,6 @@
 				</div>
 			</div>
 		</div>
-		<Avatar />
 	</div>
 </template>
 
