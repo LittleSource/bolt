@@ -1,11 +1,12 @@
 <template>
-	<div class="h-50 flex flex-col rounded p-4 gradient-border">
+	<div
+		class="sm:min-h-40 sm:min-w-140 mt-5 p-4 flex flex-col rounded gradient-border"
+	>
 		<div class="flex justify-between items-center mb-4">
-			<h4 class="font-medium text-2xl">Get Started</h4>
+			<h4 class="font-medium text-2xl">{{ title }}</h4>
 		</div>
 		<p class="mb-2">
-			Remove this welcome page by removing &lt;NuxtWelcome /&gt; tag or
-			creating an app.vue file.
+			{{ description }}
 		</p>
 	</div>
 </template>
@@ -14,6 +15,10 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
+	props: {
+		title: String,
+		description: String,
+	},
 	setup() {
 		return {};
 	},

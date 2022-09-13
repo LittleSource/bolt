@@ -1,6 +1,10 @@
 <template>
 	<NuxtLayout name="article">
-		<div>文章 / {{ $route.params.id }}</div>
+		<div class="flex justify-center">
+			<div class="sm:w-1/2 w-full px-2 sm:px-0">
+				<ContentDoc :path="($route.params.id as string)" />
+			</div>
+		</div>
 	</NuxtLayout>
 </template>
 
