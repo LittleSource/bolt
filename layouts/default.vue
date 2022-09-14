@@ -9,6 +9,7 @@
 			<Avatar />
 		</div>
 		<slot />
+		<Footer />
 	</div>
 </template>
 
