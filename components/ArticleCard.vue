@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="sm:min-h-40 sm:min-w-140 mt-5 p-4 flex flex-col rounded gradient-border"
+		class="sm:min-h-40 sm:min-w-140 mt-5 p-4 flex flex-col rounded gradient-border dark:bg-black dark:gradient-border-dark"
 	>
 		<div class="flex justify-between items-center mb-4">
 			<h4 class="font-medium text-2xl">{{ title }}</h4>
@@ -32,38 +32,17 @@ export default defineComponent({
 	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px);
 	cursor: pointer;
-}
-@media (prefers-color-scheme: light) {
-	.gradient-border {
-		background-color: rgba(255, 255, 255, 0.3);
-	}
-	.gradient-border::before {
-		background: linear-gradient(
-			90deg,
-			#e2e2e2 0%,
-			#e2e2e2 25%,
-			#00dc82 50%,
-			#36e4da 75%,
-			#0047e1 100%
-		);
-	}
-}
-@media (prefers-color-scheme: dark) {
-	.gradient-border {
-		background-color: rgba(20, 20, 20, 0.3);
-	}
-	.gradient-border::before {
-		background: linear-gradient(
-			90deg,
-			#303030 0%,
-			#303030 25%,
-			#00dc82 50%,
-			#36e4da 75%,
-			#0047e1 100%
-		);
-	}
+	background-color: rgba(255, 255, 255, 1);
 }
 .gradient-border::before {
+	background: linear-gradient(
+		90deg,
+		#e2e2e2 0%,
+		#e2e2e2 25%,
+		#00dc82 50%,
+		#36e4da 75%,
+		#0047e1 100%
+	);
 	content: "";
 	position: absolute;
 	top: 0;
@@ -83,6 +62,7 @@ export default defineComponent({
 	-webkit-mask-composite: xor;
 	mask-composite: exclude;
 }
+
 .gradient-border:hover::before {
 	background-position: -50% 0;
 	opacity: 1;

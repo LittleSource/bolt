@@ -40,19 +40,4 @@ useHead({
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
-@media (prefers-color-scheme: dark) {
-	.dark\:bg-black {
-		--tw-bg-opacity: 1;
-		background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
-	}
-	.dark\:bg-white\/10 {
-		--tw-bg-opacity: 0.1;
-		background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
-	}
-	.dark\:text-white {
-		--tw-text-opacity: 1;
-		color: rgba(255, 255, 255, var(--tw-text-opacity));
-	}
-}
 </style>

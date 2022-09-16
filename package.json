@@ -10,7 +10,8 @@
 	"devDependencies": {
 		"@nuxt/content": "^2.1.0",
 		"@unocss/nuxt": "^0.45.18",
+		"@vueuse/core": "^9.2.0",
+		"@vueuse/nuxt": "^9.2.0",
 		"nuxt": "3.0.0-rc.9"
-	},
-	"dependencies": {}
+	}
 }
