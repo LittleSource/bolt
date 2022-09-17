@@ -9,14 +9,14 @@
 				/>
 			</div>
 			<div class="mt-5 flex justify-end">
-				<n-pagination v-model:page="page" :page-count="total" simple />
+				<!-- <n-pagination v-model:page="page" :page-count="total" simple /> -->
 			</div>
 		</div>
 	</div>
 </template>
 
 <script setup lang="ts">
-import { NPagination } from "naive-ui";
+// import { NPagination } from "naive-ui";
 
 const router = useRouter();
 const navArticle = (path: string) => {
