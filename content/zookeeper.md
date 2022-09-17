@@ -1,6 +1,7 @@
 ---
 title: Zookeeper基础篇
 date: 2020-09-06 21:48:37
+description: Zookeeper它是一个分布式协调框架，主要是用来解决分布式应用中经常用到的一些数据管理问题...
 ---
 ## 1、Zookeeper介绍
 

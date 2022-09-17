@@ -1,10 +1,7 @@
 ---
 title: PHP出现SSLcertificate:unabletogetlocalissuercertificate的解决办法
-catalog: true
 date: 2020-06-01 13:38:02
-author: LittleSource
-tags:
-- php
+description: 当本地curl需要访问https时，出现SSL certificate unable to get local issuer certificate错误信息
 ---
 
 # PHP出现SSLcertificate:unabletogetlocalissuercertificate的解决办法

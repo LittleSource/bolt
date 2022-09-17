@@ -14,7 +14,6 @@
 		"@unocss/preset-icons": "^0.45.21",
 		"@vueuse/core": "^9.2.0",
 		"@vueuse/nuxt": "^9.2.0",
-		"naive-ui": "^2.33.3",
 		"nuxt": "3.0.0-rc.9"
 	}
 }
