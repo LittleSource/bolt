@@ -16,7 +16,7 @@ curl -fsSL https://code-server.dev/install.sh | sh -s -- --dry-run
 ```
 2. 然后按控制台输出的几个步骤操作:
 
-    ![控制台显示](/public/code-server/code.png)
+    ![控制台显示](/code-server/code.png)
 
 
 3. 按上述步骤操作完成后，如果要允许任意IP访问得修改一下配置文件

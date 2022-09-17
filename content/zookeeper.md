@@ -22,23 +22,26 @@ description: Zookeeper它是一个分布式协调框架，主要是用来解决�
 5. 启动（附上相关命令）
 
    ``` shell
-   ./bin/zkServer.sh start		#启动 
-   ./bin/zkServer.sh stop		#停止
+   ./bin/zkServer.sh start	#启动 
+   ./bin/zkServer.sh stop	#停止
    ./bin/zkServer.sh restart	#重启
    ./bin/zkServer.sh status	#状态
    ```
 
 ## 3、Zookeeper节点类型
+
 - 持久化节点
 - 有序节点
 - 临时节点
 - 临时有序节点
 
 ## 4、Zookeeper实现分布式锁
-![](20200908212659159957161957056.png)
+
+![](/zookeeper/20200908212659159957161957056.png)
 
 ## 5、Zookeeper实现分布式配置中心
-![](20200906213146159939910698497.png)
+
+![](/zookeeper/20200906213146159939910698497.png)
 
 ## 6、Go语言实现Zookeeper监听
 
