@@ -8,46 +8,49 @@
 					@click="navArticle(_path)"
 				/>
 			</div>
-		</div>
-		<div class="flex mt-5">
-			<button v-show="skip !== 0" @click="pre" class="mr-2">
-				上一页
-			</button>
-			<button v-show="hasNext" @click="next">下一页</button>
+			<div class="mt-5 flex justify-end">
+				<n-pagination v-model:page="page" :page-count="total" simple />
+			</div>
 		</div>
 	</div>
 </template>
 
 <script setup lang="ts">
+import { NPagination } from "naive-ui";
+
 const router = useRouter();
 const navArticle = (path: string) => {
 	router.push(`/article${path}`);
 };
+
 const skip = ref(0);
-const limit = ref(5);
-const hasNext = ref(true);
+const limit = 5;
+const page = ref(1);
+const total = ref(0);
 
 const { data, refresh } = await useAsyncData("homepage", () => {
-	return queryContent("/").skip(skip.value).limit(limit.value).find();
+	return queryContent("/").skip(skip.value).limit(limit).find();
+});
+queryContent("/")
+	.find()
+	.then((res) => {
+		total.value = Math.ceil(res.length / limit);
+	});
+watch(page, (newPage, oldPage) => {
+	if (newPage > oldPage) {
+		skip.value = skip.value ? skip.value : 1 * limit;
+	} else {
+		skip.value = skip.value - limit;
+	}
 });
 
-const next = () => {
-	skip.value = skip.value ? skip.value : 1 * limit.value;
-};
-
-const pre = () => {
-	skip.value = skip.value - limit.value;
-};
-
-watch([skip, limit], () => {
-	refresh().then(() => {
-		if (data.value.length < limit.value) {
-			hasNext.value = false;
-		} else {
-			hasNext.value = true;
-		}
-	});
+watch([skip], () => {
+	refresh();
 });
 </script>
 
-<style scoped></style>
+<style>
+.hidden {
+	visibility: hidden;
+}
+</style>

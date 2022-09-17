@@ -6,6 +6,7 @@ export default defineNuxtConfig({
 	content: {
 		// https://content.nuxtjs.org/api/configuration
 		highlight: {
+			preload: ["js", "dart", "go"],
 			// Theme used in all color schemes.
 			theme: {
 				// Default theme (same as single string)

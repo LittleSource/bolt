@@ -36,7 +36,5 @@ useHead({
 
 .antialiased {
 	min-height: 100vh;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 }
 </style>
