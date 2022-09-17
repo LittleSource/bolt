@@ -18,9 +18,8 @@
 <script setup lang="ts">
 // import { NPagination } from "naive-ui";
 
-const router = useRouter();
 const navArticle = (path: string) => {
-	router.push(`/article${path}`);
+	navigateTo(`/article${path}`);
 };
 
 const skip = ref(0);
@@ -29,13 +28,20 @@ const page = ref(1);
 const total = ref(0);
 
 const { data, refresh } = await useAsyncData("homepage", () => {
-	return queryContent("/").skip(skip.value).limit(limit).find();
+	return queryContent("/")
+		.only(["_path", "title", "description"])
+		.skip(skip.value)
+		.limit(limit)
+		.sort({ date: -1 })
+		.find();
 });
+
 queryContent("/")
 	.find()
 	.then((res) => {
 		total.value = Math.ceil(res.length / limit);
 	});
+
 watch(page, (newPage, oldPage) => {
 	if (newPage > oldPage) {
 		skip.value = skip.value ? skip.value : 1 * limit;

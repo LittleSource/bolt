@@ -18,7 +18,7 @@ defineProps({
 	},
 	height: {
 		type: [String, Number],
-		default: undefined,
+		default: "auto",
 	},
 });
 </script>
