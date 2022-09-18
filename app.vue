@@ -18,7 +18,7 @@ useHead({
 
 <template>
 	<div
-		class="font-sans antialiased bg-white dark:bg-black text-black dark:text-white text-small sm:text-base"
+		class="font-sans dark:bg-black dark:text-white text-black text-small sm:text-base"
 	>
 		<NuxtLoadingIndicator />
 		<NuxtLayout>
@@ -28,6 +28,8 @@ useHead({
 </template>
 
 <style>
+html,
+body,
 html,
 body,
 #__nuxt {
@@ -44,9 +46,5 @@ html.dark {
 		Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
 		"Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol,
 		"Noto Color Emoji";
-}
-
-.antialiased {
-	min-height: 100vh;
 }
 </style>

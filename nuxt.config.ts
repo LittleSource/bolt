@@ -2,7 +2,12 @@ import { defineNuxtConfig } from "nuxt";
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-	modules: ["@unocss/nuxt", "@nuxt/content", "@vueuse/nuxt"],
+	modules: [
+		"@unocss/nuxt",
+		"@nuxt/content",
+		"@vueuse/nuxt",
+		"@nuxtjs/color-mode",
+	],
 	content: {
 		// https://content.nuxtjs.org/api/configuration
 		highlight: {
@@ -14,8 +19,14 @@ export default defineNuxtConfig({
 				// Theme used if `html.dark`
 				dark: "vitesse-dark",
 				// Theme used if `html.sepia`
-				sepia: "vitesse-light",
+				light: "vitesse-light",
 			},
 		},
+	},
+	unocss: {
+		preflight: true,
+	},
+	colorMode: {
+		classSuffix: "",
 	},
 });

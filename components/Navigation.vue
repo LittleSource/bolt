@@ -7,9 +7,9 @@
 				<NuxtLink to="/" class="nav-item">归档</NuxtLink>
 				<NuxtLink to="/" class="nav-item">项目</NuxtLink>
 				<NuxtLink to="/about" class="nav-item">关于</NuxtLink>
-				<a class="cursor-pointer" @click="toggleDark()">
-					<div class="dark:i-carbon-moon i-carbon-sun" />
-				</a>
+				<a class="cursor-pointer" @click="toggleDark"
+					><div class="dark:i-carbon-moon i-carbon-sun"
+				/></a>
 				<a href="https://github.com/LittleSource/bolt" target="_blank"
 					><div class="i-carbon-logo-github"
 				/></a>
@@ -18,7 +18,12 @@
 	</div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const color = useColorMode();
+function toggleDark() {
+	color.preference = color.value === "dark" ? "light" : "dark";
+}
+</script>
 
 <style scoped>
 .nav-item {

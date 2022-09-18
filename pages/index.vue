@@ -17,7 +17,6 @@
 
 <script setup lang="ts">
 // import { NPagination } from "naive-ui";
-
 const navArticle = (path: string) => {
 	navigateTo(`/article${path}`);
 };
