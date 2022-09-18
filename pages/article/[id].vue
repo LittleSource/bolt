@@ -1,25 +1,24 @@
 <template>
 	<NuxtLayout name="article">
-		<div class="flex justify-center">
-			<div class="sm:w-3/7 sm:max-w-3/7 w-full px-2 py-4 sm:px-0">
-				<ContentRenderer
-					:key="page._id"
-					:value="page"
-				></ContentRenderer>
-				<div class="flex justify-between mt-10">
-					<div class="w-50 truncate">
-						<NuxtLink v-if="prev" :to="`/article${prev._path}`"
-							>上一篇：{{ prev.title }}</NuxtLink
-						>
-					</div>
-					<div class="w-50 truncate">
-						<NuxtLink
-							class=""
-							v-if="next"
-							:to="`/article${next._path}`"
-							>下一篇：{{ next.title }}</NuxtLink
-						>
-					</div>
+		<div class="flex items-center">
+			<Avatar />
+			<div class="ml-10 flex flex-col justify-around">
+				<div class="text-3xl">{{ page.title }}</div>
+				<div class="text-base">{{ page.date }}</div>
+			</div>
+		</div>
+		<div class="mt-5">
+			<ContentRenderer :key="page._id" :value="page"></ContentRenderer>
+			<div class="flex justify-between mt-10">
+				<div class="w-50 truncate">
+					<NuxtLink v-if="prev" :to="`/article${prev._path}`"
+						>上一篇：{{ prev.title }}</NuxtLink
+					>
+				</div>
+				<div class="w-50 truncate">
+					<NuxtLink class="" v-if="next" :to="`/article${next._path}`"
+						>下一篇：{{ next.title }}</NuxtLink
+					>
 				</div>
 			</div>
 		</div>

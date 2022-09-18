@@ -17,9 +17,7 @@ useHead({
 </script>
 
 <template>
-	<div
-		class="font-sans dark:bg-black dark:text-white text-black text-small sm:text-base"
-	>
+	<div class="font-sans text-small sm:text-base">
 		<NuxtLoadingIndicator />
 		<NuxtLayout>
 			<NuxtPage />
@@ -38,7 +36,7 @@ body,
 	padding: 0;
 }
 html.dark {
-	background: #222;
+	background: #000;
 	color: white;
 }
 .font-sans {

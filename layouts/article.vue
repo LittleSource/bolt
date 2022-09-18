@@ -1,12 +1,9 @@
 <template>
-	<div>
-		<Navigation />
-		<div class="w-2/5 flex justify-center">
-			<div class="flex justify-start items-center">
-				<Avatar />
-			</div>
+	<Navigation />
+	<div class="flex justify-center">
+		<div class="sm:w-3/7 sm:max-w-3/7 w-full px-2 py-4 sm:px-0">
+			<slot />
 		</div>
-		<slot />
-		<Footer />
 	</div>
+	<Footer />
 </template>

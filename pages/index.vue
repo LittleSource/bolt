@@ -1,6 +1,6 @@
 <template>
 	<div class="flex flex-col items-center justify-center">
-		<div class="mt-10">
+		<div class="mt-5">
 			<div v-for="{ _path, title, description } in data" :key="_path">
 				<ArticleCard
 					:title="title"
@@ -9,7 +9,7 @@
 				/>
 			</div>
 			<div class="mt-5 flex justify-end">
-				<!-- <n-pagination v-model:page="page" :page-count="total" simple /> -->
+				<pagination v-model:page="page" :total="total" />
 			</div>
 		</div>
 	</div>
