@@ -1,17 +1,13 @@
 <template>
 	<div class="flex flex-col items-center justify-center">
-		<div class="mt-5">
-			<div
-				class="p-2"
+		<div class="mt-5 p-2">
+			<ArticleCard
 				v-for="{ _path, title, description } in data"
 				:key="_path"
-			>
-				<ArticleCard
-					:title="title"
-					:description="description"
-					@click="navArticle(_path)"
-				/>
-			</div>
+				:title="title"
+				:description="description"
+				@click="navArticle(_path)"
+			/>
 			<div class="mt-5 flex justify-end">
 				<pagination v-model:page="page" :total="total" />
 			</div>

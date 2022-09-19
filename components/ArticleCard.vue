@@ -1,9 +1,9 @@
 <template>
 	<div
-		class="sm:min-h-40 sm:w-150 mt-5 p-4 flex flex-col rounded gradient-border dark:bg-black dark:gradient-border-dark"
+		class="sm:min-h-40 sm:w-150 w-full mt-5 p-4 flex flex-col rounded gradient-border dark:bg-black dark:gradient-border-dark"
 	>
-		<div class="flex justify-between items-center mb-4">
-			<h4 class="font-medium text-2xl">{{ title }}</h4>
+		<div class="mb-4">
+			<h4 class="font-medium text-2xl truncate">{{ title }}</h4>
 		</div>
 		<p class="mb-2">
 			{{ description }}
