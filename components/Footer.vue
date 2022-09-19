@@ -1,6 +1,6 @@
 <template>
 	<div class="footer">
-		<div class="text-sm">© 源梦科技 鲁ICP备 123313号-5</div>
+		<div class="text-sm">© 源梦科技 陇ICP备2022000468号-1</div>
 		<div class="mt-2 text-sm">服务条款 隐私条款</div>
 	</div>
 </template>

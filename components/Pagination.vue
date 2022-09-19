@@ -11,7 +11,8 @@
 			<input
 				class="w-5 h-5 mr-1 text-black text-center"
 				type="text"
-				v-model="_page"
+				:value="page"
+				@input="inputChange"
 			/>
 			<div class="text-base">/ {{ props.total }}</div>
 		</div>
@@ -36,25 +37,26 @@ const props = defineProps({
 		required: true,
 	},
 });
-const _page = ref(1);
 const emit = defineEmits<{
 	(e: "update:page", page: number): void;
 }>();
 const pre = () => {
-	_page.value--;
-	emit("update:page", props.page - 1);
-};
-const next = () => {
-	_page.value++;
-	emit("update:page", props.page + 1);
-};
-watch([_page], (newPage, oldPage) => {
-	if (newPage > oldPage) {
-		emit("update:page", props.page + 1);
-	} else {
+	if (props.page !== 1) {
 		emit("update:page", props.page - 1);
 	}
-});
+};
+const next = () => {
+	if (props.page !== props.total) {
+		emit("update:page", props.page + 1);
+	}
+};
+
+const inputChange = (e) => {
+	const page = parseInt(e.srcElement.value);
+	if (!isNaN(page) && page > 0 && page <= props.total) {
+		emit("update:page", page);
+	}
+};
 </script>
 
 <style scoped>
