@@ -1,13 +1,13 @@
 <template>
 	<NuxtLayout name="article">
-		<div class="flex items-center">
-			<Avatar />
+		<div class="flex items-center px-2 sm:px-0">
+			<Avatar class="flex-shrink-0" />
 			<div class="ml-10 flex flex-col justify-around">
 				<div class="text-3xl">{{ page.title }}</div>
 				<div class="text-base">{{ page.date }}</div>
 			</div>
 		</div>
-		<div class="mt-5">
+		<div class="mt-5 p-1">
 			<ContentRenderer :key="page._id" :value="page"></ContentRenderer>
 			<div class="flex justify-between mt-10">
 				<div class="w-50 truncate">
@@ -41,9 +41,7 @@ const { data: page } = await useAsyncData(
 );
 const [prev, next] = await queryContent<Article>("/")
 	.only(["_path", "title"])
-	.sort({ date: 1 })
 	.find();
-//const { page, prev, next } = useContent();
 </script>
 
 <style scoped></style>

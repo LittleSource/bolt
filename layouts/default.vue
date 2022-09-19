@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<Navigation />
-		<div class="flex justify-center items-center">
+		<div class="mt-4 flex justify-center items-center">
 			<Avatar />
 		</div>
 		<slot />

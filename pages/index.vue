@@ -1,6 +1,6 @@
 <template>
 	<div class="flex flex-col items-center justify-center">
-		<div class="mt-5 p-2">
+		<div class="mt-1 p-2 w-full sm:w-150">
 			<ArticleCard
 				v-for="{ _path, title, description } in data"
 				:key="_path"
@@ -8,7 +8,7 @@
 				:description="description"
 				@click="navArticle(_path)"
 			/>
-			<div class="mt-5 flex justify-end">
+			<div class="mt-5">
 				<pagination v-model:page="page" :total="total" />
 			</div>
 		</div>
@@ -53,9 +53,3 @@ watch(page, (newPage) => {
 	navigateTo(`/?page=${newPage}`);
 });
 </script>
-
-<style>
-.hidden {
-	visibility: hidden;
-}
-</style>
