@@ -40,12 +40,36 @@ html.dark {
 	color: white;
 }
 img {
+	padding: 2px 0px;
 	width: 100%;
 }
-code,
+pre > code,
 line {
 	width: 100%;
 	overflow: auto;
+}
+pre {
+	margin: 10px 0px 0px;
+}
+h1 {
+	font-size: 1.7rem;
+}
+h2 {
+	font-size: 1.6rem;
+}
+h3 {
+	font-size: 1.5rem;
+}
+h4 {
+	font-size: 1.4rem;
+}
+h5 {
+	font-size: 1.3rem;
+}
+ol,
+p,
+li {
+	font-size: 1.2rem;
 }
 
 .font-sans {
