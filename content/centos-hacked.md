@@ -1,6 +1,6 @@
 ---
 title: centos服务器被入侵
-description: 出现-bash-4.2#，那么有可能你的机器已经被入侵了，附上我遇到的这种情况，看看对你有没有帮助。
+description: 登录服务器出现-bash-4.2#，那么有可能你的机器已经被入侵了，附上我遇到的这种情况，看看对你有没有帮助。
 date: 2021-09-20 10:33:57
 ---
 ## root用户登录出现-bash-4.2 #
@@ -33,7 +33,7 @@ root用户登录出现 `-bash-4.2#`
 
 检查`/usr/bin/sshd` 内容是否是如下代码段
 
-```sell
+```shell
 #!/bin/bash
 locatieasdf=$(cat /usr/bin/.locationesclipiciu)
 if [ ! -d  ]; then
@@ -52,6 +52,7 @@ fi
 ## 2、威胁处理
 
 删除恶意脚本
+
 强制删除 /var/tmp/.sl/ 目录
 
 强制删除 /var/tmp/.ladyg0g0/ 目录
@@ -79,7 +80,7 @@ export PS1='[\u@\h \W]\$'
 1. 删除 gh0stx, sclipicibosu, mexalzsherifu 中存在的用户
 
 userdel –r sclipicibosu//删除不成功就使用chmod修改/etc/passwd和/etc/shadow权限，再使用vim删除该用户
-1
+
 reboot重启
 
 passwd root //修改密码为强口令
@@ -87,7 +88,11 @@ passwd root //修改密码为强口令
 ## 3、恶意脚本分析
 
 往系统服务中注册了一个私有服务 /lib/systemd/system/myservice.service
+
 myservice私有服务中进行了一个文件同步操作 rsync -r /usr/bin/.locationesclipiciu/
+
 同步了 /var/tmp/.sl/ 下的内容
+
 重写 .bashrc，导致常用命令失效
+
 后续可能进行的行为暂时不明
