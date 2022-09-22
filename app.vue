@@ -71,6 +71,9 @@ p,
 li {
 	font-size: 1.2rem;
 }
+p {
+	line-height: 1.8rem;
+}
 
 .font-sans {
 	font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
