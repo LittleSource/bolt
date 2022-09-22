@@ -38,6 +38,6 @@ function toggleDark() {
 	background-color: rgba(150, 150, 150, 0.5);
 }
 a:hover {
-	background-color: rgba(255, 255, 255, 0);
+	background-color: transparent;
 }
 </style>
