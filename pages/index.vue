@@ -9,7 +9,7 @@
 				@click="navArticle(_path)"
 			/>
 			<div class="mt-5">
-				<pagination v-model:page="page" :total="total" />
+				<pagination v-model:page="page" :total="pageSum" />
 			</div>
 		</div>
 	</div>
@@ -25,27 +25,22 @@ const navArticle = (path: string) => {
 	navigateTo(`/article${path}`);
 };
 
-const limit = 5;
+const pageSum = usePageSum();
+
+const limit = useLimit();
 
 const page = ref(route.query?.page ? parseInt(route.query.page as string) : 1);
 
-const skip = ref((page.value - 1) * limit);
-const total = ref(0);
+const skip = (page.value - 1) * limit;
 
 const { data, refresh } = await useAsyncData("homepage", () => {
 	return queryContent("/")
 		.only(["_path", "title", "description"])
-		.skip(skip.value)
+		.skip(skip)
 		.limit(limit)
 		.sort({ date: -1 })
 		.find();
 });
-
-queryContent("/")
-	.find()
-	.then((res) => {
-		total.value = Math.ceil(res.length / limit);
-	});
 
 refresh();
 

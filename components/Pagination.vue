@@ -1,7 +1,7 @@
 <template>
 	<div class="flex justify-center">
 		<button
-			class="dark:disabled:bg-gray-400 disabled:bg-gray-300 disabled:text-white"
+			class="dark:bg-black dark:text-white dark:disabled:bg-white dark:disabled:text-black disabled:bg-grey-400 disabled:text-grey-200"
 			:disabled="props.page == 1"
 			@click="pre"
 		>
@@ -9,7 +9,7 @@
 		</button>
 		<div class="flex mx-2 justify-center items-center">
 			<input
-				class="w-5 h-5 mr-1 text-black text-center"
+				class="w-8 h-6 rounded-1 mr-1 text-black text-center bg-gray-50 dark:bg-gray-200"
 				type="text"
 				:value="page"
 				@input="inputChange"
@@ -17,7 +17,7 @@
 			<div class="text-base">/ {{ props.total }}</div>
 		</div>
 		<button
-			class="dark:disabled:bg-gray-400 disabled:bg-gray-300 disabled:text-white"
+			class="dark:bg-black dark:text-white dark:disabled:bg-white dark:disabled:text-black disabled:bg-grey-400 disabled:text-grey-200"
 			:disabled="props.page == props.total"
 			@click="next"
 		>

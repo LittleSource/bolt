@@ -14,6 +14,15 @@ useHead({
 		},
 	],
 });
+
+//查询总页数
+const limit = useLimit();
+const pageSum = usePageSum();
+queryContent("/")
+	.find()
+	.then((res) => {
+		pageSum.value = Math.ceil(res.length / limit);
+	});
 </script>
 
 <template>
