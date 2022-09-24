@@ -42,6 +42,6 @@ const { data: page } = await useAsyncData(
 const [prev, next] = await queryContent<Article>("/")
 	.only(["_path", "title"])
 	.find();
+useHead({ title: `${page.value.title}-Little Yuan's blog` });
 </script>
-
 <style scoped></style>

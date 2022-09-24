@@ -1,7 +1,7 @@
 ---
-title: 'Title of the page'
-description: 'meta description of the page'
-date: 2022-04-04 22:12:02
+title: '用React写了一个超酷的简历模板'
+description: '说到简历这个事情，咱们程序员肯定不能用Word模板随便整一个,所以决定打算自己写一个~'
+date: 2022-08-18 21:12:02
 ---
 ## 🪶前言
 
@@ -13,6 +13,7 @@ date: 2022-04-04 22:12:02
 
 废话到此为止，上图👇
 ## 🪶效果
+
 ❤️‍🔥[在线体验](https://resume.52ym.vip/)
 
 Github https://github.com/LittleSource/resume
@@ -23,8 +24,8 @@ Github https://github.com/LittleSource/resume
 
 **适配手机端**
 
-
 ![4b8cdb07-bdd0-4ec9-b8c9-a141d7e65e48.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/64cd22a52a184ae5a4587972fe4ee58d~tplv-k3u1fbpfcp-watermark.image?)
+
 ## 🪶Features
 
 - 💥`react`+`ts`+`vite`赶时髦儿的技术栈
@@ -56,4 +57,4 @@ Github https://github.com/LittleSource/resume
 </template>
 ```
 
-Github https://github.com/LittleSource/resume-react
+Github [github.com/LittleSource/resume-react](https://github.com/LittleSource/resume-react)
