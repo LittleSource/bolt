@@ -28,11 +28,7 @@
 </template>
 
 <script setup lang="ts">
-import type { MarkdownParsedContent } from "@nuxt/content/dist/runtime/types";
-interface Article extends MarkdownParsedContent {
-	author: string;
-	date: string;
-}
+import { Article } from "types/article";
 definePageMeta({
 	layout: false, // 手动关闭 default 布局
 });

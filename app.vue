@@ -83,7 +83,6 @@ li {
 p {
 	line-height: 1.8rem;
 }
-
 .font-sans {
 	font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
 		Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
