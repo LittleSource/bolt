@@ -4,7 +4,9 @@
 			<Avatar class="flex-shrink-0" />
 			<div class="ml-10 flex flex-col justify-around">
 				<div class="text-3xl">{{ page.title }}</div>
-				<div class="text-base">{{ page.date }}</div>
+				<div class="text-base mt-2">
+					{{ articleDate }}
+				</div>
 			</div>
 		</div>
 		<div class="mt-5 p-1">
@@ -29,19 +31,28 @@
 import type { MarkdownParsedContent } from "@nuxt/content/dist/runtime/types";
 interface Article extends MarkdownParsedContent {
 	author: string;
+	date: string;
 }
 definePageMeta({
 	layout: false, // 手动关闭 default 布局
 });
+
+const { $dayjs } = useNuxtApp();
+const articleDate = ref($dayjs().format("L LT"));
+
 const route = useRoute();
 
 const { data: page } = await useAsyncData(
 	route.params.id as string,
 	queryContent<Article>(route.params.id as string).findOne
 );
+
+articleDate.value = page.value?.date && $dayjs(page.value.date).fromNow();
+
 const [prev, next] = await queryContent<Article>("/")
 	.only(["_path", "title"])
 	.find();
+
 useHead({ title: `${page.value.title}-Little Yuan's blog` });
 </script>
 <style scoped></style>

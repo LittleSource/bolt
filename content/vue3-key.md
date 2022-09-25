@@ -94,7 +94,7 @@ Web 应用快捷键支持（一）：正确处理 Keyboard Event
 处理Shift+Enter换行
 在有些场景中，我们需要支持按 Enter 提交，Shift+Enter 换行。对于这种需求，我们可以利用.exact修饰符
 
-[](/vue3-key/2021032423133333.png)
+[](vue-key/2021032423133333.png)
 
 ```vue
 <input v-model="input" placeholder="请输入内容" @keydown.enter.exact="handleKeyBoard($event, handleEnter)" />

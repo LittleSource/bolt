@@ -7,6 +7,7 @@ export default defineNuxtConfig({
 		"@nuxt/content",
 		"@vueuse/nuxt",
 		"@nuxtjs/color-mode",
+		"@nathanchase/nuxt-dayjs-module",
 	],
 	content: {
 		// https://content.nuxtjs.org/api/configuration
@@ -28,5 +29,8 @@ export default defineNuxtConfig({
 	},
 	colorMode: {
 		classSuffix: "",
+	},
+	dayjs: {
+		plugins: ["relativeTime"],
 	},
 });
