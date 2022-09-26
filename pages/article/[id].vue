@@ -10,7 +10,12 @@
 			</div>
 		</div>
 		<div class="mt-5 p-1">
-			<ContentRenderer :key="page._id" :value="page"></ContentRenderer>
+			<ContentRenderer :value="page">
+				<ContentRendererMarkdown
+					:value="page"
+					:components="customComponents"
+				/>
+			</ContentRenderer>
 			<div class="flex justify-between mt-10">
 				<div class="w-50 truncate">
 					<NuxtLink v-if="prev" :to="`/article${prev._path}`"
@@ -32,7 +37,9 @@ import { Article } from "types/article";
 definePageMeta({
 	layout: false, // 手动关闭 default 布局
 });
-
+const customComponents = {
+	// img: "ProseImg",
+};
 const { $dayjs } = useNuxtApp();
 const articleDate = ref($dayjs().format("L LT"));
 

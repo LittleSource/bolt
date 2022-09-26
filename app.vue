@@ -48,10 +48,6 @@ html.dark {
 	background: #000;
 	color: white;
 }
-img {
-	padding: 2px 0px;
-	width: 100%;
-}
 pre > code,
 line {
 	width: 100%;
