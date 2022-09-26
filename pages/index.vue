@@ -33,14 +33,7 @@ const page = ref(route.query?.page ? parseInt(route.query.page as string) : 1);
 
 const skip = (page.value - 1) * limit;
 
-const { data, refresh } = await useAsyncData("homepage", () => {
-	return queryContent("/")
-		.only(["_path", "title", "description"])
-		.skip(skip)
-		.limit(limit)
-		.sort({ date: -1 })
-		.find();
-});
+const { data, refresh } = queryIndexList(skip, limit);
 
 refresh();
 

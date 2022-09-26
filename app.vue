@@ -18,11 +18,9 @@ useHead({
 //查询总页数
 const limit = useLimit();
 const pageSum = usePageSum();
-queryContent("/")
-	.find()
-	.then((res) => {
-		pageSum.value = Math.ceil(res.length / limit);
-	});
+queryArticleTotal().then((total) => {
+	pageSum.value = Math.ceil(total / limit);
+});
 </script>
 
 <template>

@@ -27,7 +27,7 @@ I have been working on being a full stack engineer who knows nothing
 
 Currently focusing on `Web front end`、`Golang` ⚡
 
-📫 If you want to chat, you can [send email](littley@outlook.ie) to me。 
+📫 If you want to chat, you can [send email](mailto:littley@outlook.ie) to me。 
 
 ## 𝗠𝘆 𝗧𝗲𝗰𝗸 𝗦𝘁𝗮𝗰𝗸
 
