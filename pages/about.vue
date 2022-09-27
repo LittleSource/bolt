@@ -1,15 +1,11 @@
 <template>
-	<NuxtLayout name="article">
-		<div class="flex justify-center">
-			<ContentDoc path="/about" />
-		</div>
-	</NuxtLayout>
+	<div class="flex justify-center">
+		<ContentDoc path="/about" />
+	</div>
 </template>
 
 <script setup lang="ts">
 definePageMeta({
-	layout: false, // 手动关闭 default 布局
+	layout: "article",
 });
 </script>
-
-<style scoped></style>
