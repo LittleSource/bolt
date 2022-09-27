@@ -10,12 +10,7 @@
 			</div>
 		</div>
 		<div class="mt-5 p-1">
-			<ContentRenderer :value="page">
-				<ContentRendererMarkdown
-					:value="page"
-					:components="customComponents"
-				/>
-			</ContentRenderer>
+			<ContentRenderer :value="page"></ContentRenderer>
 			<div class="flex justify-between mt-10">
 				<div class="w-50 truncate">
 					<NuxtLink v-if="prev" :to="`/article${prev._path}`"
@@ -33,28 +28,17 @@
 </template>
 
 <script setup lang="ts">
-import { Article } from "types/article";
 definePageMeta({
 	layout: false, // 手动关闭 default 布局
 });
-const customComponents = {
-	// img: "ProseImg",
-};
+const route = useRoute();
+const page = await queryArticleDetails(route.params.id as string);
+
 const { $dayjs } = useNuxtApp();
 const articleDate = ref($dayjs().format("L LT"));
-
-const route = useRoute();
-
-const { data: page } = await useAsyncData(
-	route.params.id as string,
-	queryContent<Article>(route.params.id as string).findOne
-);
-
 articleDate.value = page.value?.date && $dayjs(page.value.date).fromNow();
 
-const [prev, next] = await queryContent<Article>("/")
-	.only(["_path", "title"])
-	.find();
+const [prev, next] = await queryArticlePreAndNext();
 
 useHead({ title: `${page.value.title}-Little Yuan's blog` });
 </script>

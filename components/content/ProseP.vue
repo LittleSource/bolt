@@ -3,11 +3,11 @@
 </template>
 
 <style>
-p img {
+p > img {
 	padding: 2px 0px;
-	width: 100%;
+	max-width: 100%;
 }
-p a {
+p > a {
 	color: rgba(255, 255, 255, 0.9);
 	text-decoration: underline solid;
 }
