@@ -1,0 +1,23 @@
+/* top bar start */
+.nav-item {
+	padding: 8px 12px;
+	line-height: 1.5rem;
+}
+.nav-item:hover {
+	border-radius: 3px;
+	background-color: rgba(150, 150, 150, 0.5);
+}
+/* top bar end */
+
+.footer {
+	margin-top: 20px;
+	width: 100%;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-top: 1px solid;
+	--tw-border-opacity: 1;
+	border-top-color: rgba(60, 60, 60, var(--tw-border-opacity));
+}
