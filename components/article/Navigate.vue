@@ -1,6 +1,8 @@
 <template>
 	<div>
-		<div class="ml-5 text-base font-medium">大纲</div>
+		<div class="ml-5 text-base font-medium border-l-4 border-dark-50 pl-2">
+			大纲
+		</div>
 		<div class="mt-2 ml-5" v-for="(item, index) in articleNav" :key="index">
 			<a :href="`#${item.props.id}`">
 				{{ item.props.id }}
