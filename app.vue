@@ -19,12 +19,10 @@ queryArticleTotal().then((total) => {
 </script>
 
 <template>
-	<div class="text-small sm:text-base">
+	<NuxtLayout>
 		<NuxtLoadingIndicator />
-		<NuxtLayout>
-			<NuxtPage />
-		</NuxtLayout>
-	</div>
+		<NuxtPage />
+	</NuxtLayout>
 </template>
 
 <style>

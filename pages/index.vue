@@ -1,26 +1,30 @@
 <template>
-	<div class="flex flex-col items-center justify-center">
-		<div class="mt-1 p-2 w-full sm:w-150">
-			<ArticleCard
-				v-for="{ _path, title, description } in data"
-				:key="_path"
-				:title="title"
-				:description="description"
-				@click="navArticle(_path)"
-			/>
-			<div class="mt-5">
-				<pagination v-model:page="page" :total="pageSum" />
+	<div>
+		<NuxtLayout name="default">
+			<div class="flex flex-col items-center justify-center">
+				<div class="mt-1 p-2 w-full sm:w-150">
+					<ArticleCard
+						v-for="{ _path, title, description } in data"
+						:key="_path"
+						:title="title"
+						:description="description"
+						@click="navArticle(_path)"
+					/>
+					<div class="mt-5">
+						<pagination v-model:page="page" :total="pageSum" />
+					</div>
+				</div>
 			</div>
-		</div>
+		</NuxtLayout>
 	</div>
 </template>
 
 <script setup lang="ts">
 const route = useRoute();
 definePageMeta({
+	layout: false,
 	key: (route) => route.fullPath,
 });
-
 const navArticle = (path: string) => {
 	navigateTo(`/article${path}`);
 };

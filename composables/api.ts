@@ -15,7 +15,6 @@ export const queryIndexList = (skip: number, limit: number) => {
 			.find();
 	});
 };
-
 // 查询文章总数
 export const queryArticleTotal = async (): Promise<number> => {
 	try {
