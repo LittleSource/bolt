@@ -23,16 +23,43 @@ export default defineComponent({
 </script>
 
 <template>
-	<slot />
+	<div class="dark:bg-gray-900 bg-gray-50 code-container">
+		<div class="flex justify-between relative w-14">
+			<div class="traffic-light bg-red-500"></div>
+			<div class="traffic-light bg-yellow-400"></div>
+			<div class="traffic-light bg-green-500"></div>
+		</div>
+		<div class="code-scroll">
+			<slot />
+		</div>
+	</div>
 </template>
 
 <style>
-pre code .line {
-	display: flex;
-	min-height: 1rem;
-	overflow: hidden;
+.code-container {
+	margin-top: 0.5rem;
+	padding: 0.5rem 0.5rem 0;
+	border-radius: 6px;
 }
-pre code .line > span {
-	text-overflow: clip;
+.code-scroll {
+	overflow-x: scroll;
+	overflow-y: hidden;
+	-ms-overflow-style: none;
+	overflow: -moz-scrollbars-none;
+}
+
+.code-scroll::-webkit-scrollbar {
+	width: 0 !important;
+}
+
+.traffic-light {
+	width: 0.9rem;
+	height: 0.9rem;
+	border-radius: 50%;
+}
+
+pre code .line {
+	display: block;
+	min-height: 1rem;
 }
 </style>

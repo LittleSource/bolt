@@ -4,7 +4,7 @@
 			大纲
 		</div>
 		<div class="mt-2 ml-5" v-for="(item, index) in articleNav" :key="index">
-			<a :href="`#${item.props.id}`">
+			<a class="border-gray-400" :href="`#${item.props.id}`">
 				{{ item.props.id }}
 			</a>
 		</div>
@@ -33,4 +33,9 @@ export default defineComponent({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+a:hover {
+	border-bottom: 1px solid;
+	transition: border 0.3s ease-out;
+}
+</style>
