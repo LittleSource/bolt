@@ -8,7 +8,10 @@ p > img {
 	max-width: 100%;
 }
 p > a {
-	color: rgba(255, 255, 255, 0.9);
-	text-decoration: underline solid;
+	color: rgba(180, 180, 180, 0.9);
+}
+p > a:hover {
+	border-bottom: 1px solid gray;
+	transition: border 1s ease-in-out;
 }
 </style>

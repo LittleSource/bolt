@@ -25,7 +25,6 @@ Github https://github.com/LittleSource/resume
 **适配手机端**
 
 ![4b8cdb07-bdd0-4ec9-b8c9-a141d7e65e48.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/64cd22a52a184ae5a4587972fe4ee58d~tplv-k3u1fbpfcp-watermark.image?)
-
 ## 🪶Features
 
 - 💥`react`+`ts`+`vite`赶时髦儿的技术栈
@@ -44,17 +43,4 @@ Github https://github.com/LittleSource/resume
 
 希望有兴趣的小伙伴可以点个`star`、或者提交`PR`一起开发这个项目。
 
-```js
-<template>
-	<NuxtLayout name="article">
-		{{ $route.path }}
-		<div class="flex justify-center">
-			<div class="sm:w-1/2 w-full px-2 sm:px-0">
-				<ContentDoc path="/" />
-			</div>
-		</div>
-	</NuxtLayout>
-</template>
-```
-
-Github [github.com/LittleSource/resume-react](https://github.com/LittleSource/resume-react)
+Github https://github.com/LittleSource/resume
