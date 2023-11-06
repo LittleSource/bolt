@@ -25,6 +25,8 @@ ssh-keygen -t rsa -C "你的邮箱"
 
 ```shell
 ssh-copy-id -i ~/.ssh/id_rsa.pub root@192.168.204.100
+# windows下可能没有ssh-copy-id命令 可以使用
+type %USERPROFILE%.ssh\id_rsa.pub | ssh ubuntu@192.168.1.8 "cat >> .ssh/authorized_keys"
 ```
 
 ## 3、大功告成
