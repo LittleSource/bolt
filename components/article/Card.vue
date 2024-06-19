@@ -1,7 +1,6 @@
 <template>
 	<div
-		class="sm:min-h-40 sm:w-150 w-full mt-5 p-4 flex flex-col rounded gradient-border dark:bg-black dark:gradient-border-dark"
-	>
+		class="sm:min-h-40 sm:w-150 w-full mt-5 p-4 flex flex-col rounded gradient-border dark:bg-black dark:gradient-border-dark">
 		<div class="mb-4">
 			<div class="font-medium text-2xl truncate">{{ title }}</div>
 		</div>
@@ -32,17 +31,19 @@ export default defineComponent({
 	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px);
 	cursor: pointer;
-	background-color: rgba(255, 255, 255, 1);
 }
+
+.gradient-border-dark {
+	background-color: rgba(0, 0, 0, 0.3) !important;
+}
+
 .gradient-border::before {
-	background: linear-gradient(
-		90deg,
-		#e2e2e2 0%,
-		#e2e2e2 25%,
-		#00dc82 50%,
-		#36e4da 75%,
-		#0047e1 100%
-	);
+	background: linear-gradient(90deg,
+			#e2e2e2 0%,
+			#e2e2e2 25%,
+			#00dc82 50%,
+			#36e4da 75%,
+			#0047e1 100%);
 	content: "";
 	position: absolute;
 	top: 0;

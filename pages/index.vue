@@ -1,18 +1,62 @@
 <template>
 	<div>
 		<NuxtLayout name="default">
-			<div class="flex flex-col items-center justify-center">
-				<div class="mt-1 p-2 w-full sm:w-150">
-					<ArticleCard
-						v-for="{ _path, title, description } in data"
-						:key="_path"
-						:title="title"
-						:description="description"
-						@click="navArticle(_path)"
-					/>
-					<div class="mt-5">
-						<pagination v-model:page="page" :total="pageSum" />
+			<div class="flex flex-col items-center justify-center my-30">
+				<div class="max-w-screen-md 2xl:max-w-7xl  gap-5 flex flex-col justify-center min-h-full px-6 md:px-10">
+					<p class="text-2xl md:text-5xl tracking-widest animate-fade-up animate-ease-in-out"
+						:style="{ animationDelay: getDelay() + `ms` }">
+						你好，我是
+					</p>
+					<strong :class="cn(
+						`text-5xl md:text-8xl tracking-widest font-black  bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500`,
+						'animate-fade-up animate-ease-in-out',
+					)" :style="{
+						WebkitTextFillColor: 'transparent',
+						animationDelay: `${getDelay()}ms`,
+					}">
+						LittleYuan
+					</strong>
+					<div :class="cn('animate-fade-up animate-ease-in-out')"
+						:style="{ animationDelay: `${getDelay()}ms` }">
+						<div class="text-2xl md:text-5xl tracking-widest">一名全栈开发工程师</div>
 					</div>
+					<p :class="cn('text-2xl md:text-5xl tracking-widest', 'animate-fade-up animate-ease-in-out')"
+						:style="{ animationDelay: `${getDelay()}ms` }">
+						喜欢
+						<span :class="`font-semibold text-[#42d392]`"">Vue</span>、
+						<span :class="`font-semibold text-[#007acc]`">TypeScript</span>和
+						<span :class="`font-semibold text-[#00b4e0]`">Golang</span>
+						<span class="ml-4">\owo/ ~</span>
+					</p>
+					<p :class="cn('text-base md:text-2xl text-muted-foreground tracking-widest'
+						, 'animate-fade-up animate-ease-in-out',)" :style="{ animationDelay: `${getDelay()}ms`, }">
+						我在这个网站记录我的成长，努力 💪 做一个啥也不会的全栈工程师。
+					</p>
+					<div :class="cn('flex space-x-4', 'animate-fade-up animate-ease-in-out')"
+						:style="{ animationDelay: `${getDelay()}ms` }">
+						<Link href="/blog">
+						我的博客
+						</Link>
+						<Link href=" /about">
+						关于我
+						</Link>
+					</div>
+
+					<!-- <ul :class="cn('flex space-x-4', 'animate-fade-up animate-ease-in-out' )" :style="{
+						animationDelay: `${getDelay()}ms`, }"">
+						<li key={el.link}>
+							<Tooltip>
+								<TooltipTrigger asChild>
+									<Button asChild variant="outline" size="icon">
+										<Link href={el.link} target="_blank">
+										{el.icon}
+										</Link>
+									</Button>
+								</TooltipTrigger>
+								<TooltipContent>{el.label}</TooltipContent>
+							</Tooltip>
+						</li>
+					</ul> -->
 				</div>
 			</div>
 		</NuxtLayout>
@@ -20,28 +64,20 @@
 </template>
 
 <script setup lang="ts">
+import { type ClassValue, clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge'
 const route = useRoute();
 definePageMeta({
 	layout: false,
 	key: (route) => route.fullPath,
 });
-const navArticle = (path: string) => {
-	navigateTo(`/article${path}`);
+let delay = 0;
+
+// 每次调用，增加延时
+const getDelay = () => (delay += 200);
+
+const cn = (...inputs: ClassValue[]) => {
+	return twMerge(clsx(inputs));
 };
 
-const pageSum = usePageSum();
-
-const limit = useLimit();
-
-const page = ref(route.query?.page ? parseInt(route.query.page as string) : 1);
-
-const skip = (page.value - 1) * limit;
-
-const { data, refresh } = queryIndexList(skip, limit);
-
-refresh();
-
-watch(page, (newPage) => {
-	navigateTo(`/?page=${newPage}`);
-});
 </script>

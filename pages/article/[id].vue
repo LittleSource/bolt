@@ -16,20 +16,14 @@
 				<ContentRenderer :value="page"></ContentRenderer>
 			</template>
 			<template #article-navigate>
-				<ArticleNavigate
-					:childrenNode="page.excerpt.children"
-				></ArticleNavigate>
+				<ArticleNavigate :childrenNode="page.body.children"></ArticleNavigate>
 			</template>
 			<template #next>
 				<div class="w-50 truncate">
-					<NuxtLink v-if="prev" :to="`/article${prev._path}`"
-						>上一篇：{{ prev.title }}</NuxtLink
-					>
+					<NuxtLink v-if="prev" :to="`/article${prev._path}`">上一篇：{{ prev.title }}</NuxtLink>
 				</div>
 				<div class="w-50 truncate">
-					<NuxtLink class="" v-if="next" :to="`/article${next._path}`"
-						>下一篇：{{ next.title }}</NuxtLink
-					>
+					<NuxtLink class="" v-if="next" :to="`/article${next._path}`">下一篇：{{ next.title }}</NuxtLink>
 				</div>
 			</template>
 		</NuxtLayout>
@@ -41,10 +35,10 @@ definePageMeta({
 });
 const route = useRoute();
 const page = await queryArticleDetails(route.params.id as string);
-const { $dayjs } = useNuxtApp();
-const articleDate = ref($dayjs().format("L LT"));
+const dayjs = useDayjs()
+const articleDate = ref(dayjs().format("L LT"));
 if (page.value?.date) {
-	articleDate.value = $dayjs(page.value.date).fromNow();
+	articleDate.value = dayjs(page.value.date).fromNow();
 }
 const [prev, next] = await queryArticlePreAndNext();
 

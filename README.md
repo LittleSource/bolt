@@ -1,10 +1,42 @@
-# bolt
+# Content v2 Minimal Starter
 
-一个基于nuxt.js的博客
+Look at the [Content documentation](https://content.nuxt.com/) to learn more.
 
-## 初步计划
+## Setup
 
-1. 基于nuxt.js服务端渲染，良好的SEO
-2. 采用markdown文件编写，使用marked.js解析
-3. 无需服务器以及数据库
-4. 跨组件/页面动画
+Make sure to install the dependencies:
+
+```bash
+# yarn
+yarn install
+
+# npm
+npm install
+
+# pnpm
+pnpm install
+```
+
+## Development Server
+
+Start the development server on http://localhost:3000
+
+```bash
+npm run dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+npm run build
+```
+
+Locally preview production build:
+
+```bash
+npm run preview
+```
+
+Checkout the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
