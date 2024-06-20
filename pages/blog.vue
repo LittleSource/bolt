@@ -1,9 +1,6 @@
 <template>
 	<div>
 		<NuxtLayout name="default">
-			<div class="mt-4 flex justify-center items-center">
-				<Avatar />
-			</div>
 			<div class="flex flex-col items-center justify-center">
 				<div class="mt-1 p-2 w-full sm:w-150">
 					<ArticleCard v-for="{ _path, title, description } in data" :key="_path" :title="title"
