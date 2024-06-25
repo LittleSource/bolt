@@ -5,9 +5,7 @@ description: 什么是Redis缓存穿透,布隆过滤器底层算法,本质...
 ---
 ## 1. 什么是Redis缓存穿透
 
-![](/redis-cache-penetration/20200905222406159931584661410.png)
-
-
+![1](/redis-cache-penetration/20200905222406159931584661410.png)
 
 ## 2. 布隆过滤器底层算法
 
@@ -17,16 +15,12 @@ description: 什么是Redis缓存穿透,布隆过滤器底层算法,本质...
 
 2. 一系列随机映射函数（Hash）
 
-   ![](/redis-cache-penetration/20200905225425159931766557459.png)
-
-   
-
-
+   ![1](/redis-cache-penetration/20200905225425159931766557459.png)
 
 ### ②布隆过滤器的重要结论
 
-![](/redis-cache-penetration/20200905225657159931781799473.png)
+![2](/redis-cache-penetration/20200905225657159931781799473.png)
 
 ## 3. 使用布隆过滤器解决缓存穿透流程图
 
-![](/redis-cache-penetration/20200905232415159931945520524.png)
+![3](/redis-cache-penetration/20200905232415159931945520524.png)

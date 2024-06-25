@@ -9,11 +9,11 @@ description: Zookeeper它是一个分布式协调框架，主要是用来解决�
 
 > **Zookeeper = 文件系统 + 监听通知机制**
 
-##  2、Zookeeper安装
+## 2、Zookeeper安装
 
 1. 安装java jdk
 
-2. 下载ZooKeeper，地址：http://mirrors.hust.edu.cn/apache/zookeeper/
+2. 下载ZooKeeper，地址：[http://mirrors.hust.edu.cn/apache/zookeeper/](http://mirrors.hust.edu.cn/apache/zookeeper/)
 
 3. 解压zookeeper-3.4.12.tar.gz
 
@@ -22,10 +22,10 @@ description: Zookeeper它是一个分布式协调框架，主要是用来解决�
 5. 启动（附上相关命令）
 
    ``` shell
-   ./bin/zkServer.sh start	#启动 
-   ./bin/zkServer.sh stop	#停止
-   ./bin/zkServer.sh restart	#重启
-   ./bin/zkServer.sh status	#状态
+   ./bin/zkServer.sh start  #启动 
+   ./bin/zkServer.sh stop  #停止
+   ./bin/zkServer.sh restart  #重启
+   ./bin/zkServer.sh status  #状态
    ```
 
 ## 3、Zookeeper节点类型
@@ -37,11 +37,11 @@ description: Zookeeper它是一个分布式协调框架，主要是用来解决�
 
 ## 4、Zookeeper实现分布式锁
 
-![](/zookeeper/20200908212659159957161957056.png)
+![1](/zookeeper/20200908212659159957161957056.png)
 
 ## 5、Zookeeper实现分布式配置中心
 
-![](/zookeeper/20200906213146159939910698497.png)
+![1](/zookeeper/20200906213146159939910698497.png)
 
 ## 6、Go语言实现Zookeeper监听
 
@@ -49,9 +49,9 @@ description: Zookeeper它是一个分布式协调框架，主要是用来解决�
 package main
 
 import (
-	"fmt"
-	"github.com/samuel/go-zookeeper/zk"
-	"time"
+ "fmt"
+ "github.com/samuel/go-zookeeper/zk"
+ "time"
 )
 
 func getConnect(host []string) (conn *zk.Conn){

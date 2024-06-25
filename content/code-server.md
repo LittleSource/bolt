@@ -18,9 +18,9 @@ code server 的目标是为开发者构建一个便捷统一的开发环境，�
 
 1. 使用github文档提供的命令
 
-``` shell
-curl -fsSL https://code-server.dev/install.sh | sh -s -- --dry-run
-```
+    ``` shell
+    curl -fsSL https://code-server.dev/install.sh | sh -s -- --dry-run
+    ```
 
 2. 然后按控制台输出的几个步骤操作:
 
@@ -28,18 +28,18 @@ curl -fsSL https://code-server.dev/install.sh | sh -s -- --dry-run
 
 3. 按上述步骤操作完成后，如果要允许任意IP访问得修改一下配置文件
 
-``` shell
-vi ~/.config/code-server/config.yaml
-```
+ ``` shell
+  vi ~/.config/code-server/config.yaml
+ ```
 
-改成如下代码
+ 改成如下代码
 
-``` shell
-bind-addr: 0.0.0.0:8080
-auth: password
-password: 123456
-cert: false
-```
+  ```shell
+        bind-addr: 0.0.0.0:8080
+        auth: password
+        password: 123456
+        cert: false
+  ```
 
 4. 启动
 
