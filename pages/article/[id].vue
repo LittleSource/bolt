@@ -20,10 +20,12 @@
 			</template>
 			<template #next>
 				<div class="w-50 truncate">
-					<NuxtLink v-if="prev" :to="`/article${prev._path}`">上一篇：{{ prev.title }}</NuxtLink>
+					上一篇：<NuxtLink v-if="prev" :to="`/article${prev._path}`">{{ prev.title }}</NuxtLink>
+					<span v-else>无</span>
 				</div>
 				<div class="w-50 truncate">
-					<NuxtLink class="" v-if="next" :to="`/article${next._path}`">下一篇：{{ next.title }}</NuxtLink>
+					下一篇：<NuxtLink class="" v-if="next" :to="`/article${next._path}`">{{ next.title }}</NuxtLink>
+					<span v-else>无</span>
 				</div>
 			</template>
 		</NuxtLayout>
@@ -40,7 +42,7 @@ const articleDate = ref(dayjs().format("L LT"));
 if (page.value?.date) {
 	articleDate.value = dayjs(page.value.date).fromNow();
 }
-const [prev, next] = await queryArticlePreAndNext();
+const [prev, next] = await queryArticlePreAndNext(route.params.id as string);
 
 useHead({ title: `${page.value.title}-Little Yuan's blog` });
 </script>

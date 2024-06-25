@@ -37,6 +37,6 @@ const { data, refresh } = queryIndexList(skip, limit);
 refresh();
 
 watch(page, (newPage) => {
-	navigateTo(`/?page=${newPage}`);
+	navigateTo(`/blog?page=${newPage}`);
 });
 </script>
