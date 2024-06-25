@@ -1,5 +1,4 @@
-import type { QueryBuilderWhere } from "@nuxt/content/types";
-import { Article } from "types/article";
+import type { Article } from "@/types/article";
 import type { Ref } from "vue";
 // 需要过滤的where条件
 const filter = { title: { $ne: "About Me" } };
@@ -33,7 +32,7 @@ export const queryArticleTotal = async (): Promise<number> => {
 // 查询文章详情
 export const queryArticleDetails = async (
   path: string
-): Promise<Ref<Pick<Article, string>>> => {
+): Promise<Ref<Article | null>> => {
   try {
     const { data: page } = await useAsyncData(
       path,

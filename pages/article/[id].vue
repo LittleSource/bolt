@@ -5,7 +5,7 @@
 				<div class="flex items-center px-2 sm:px-0">
 					<Avatar class="flex-shrink-0" />
 					<div class="ml-10 flex flex-col justify-around">
-						<div class="text-3xl">{{ page.title }}</div>
+						<div class="text-3xl">{{ page?.title }}</div>
 						<div class="text-base mt-2">
 							{{ articleDate }}
 						</div>
@@ -13,10 +13,10 @@
 				</div>
 			</template>
 			<template #content>
-				<ContentRenderer :value="page"></ContentRenderer>
+				<ContentRenderer :value="page ?? undefined"></ContentRenderer>
 			</template>
 			<template #article-navigate>
-				<ArticleNavigate :childrenNode="page.body.children"></ArticleNavigate>
+				<ArticleNavigate :childrenNode="page?.body.children"></ArticleNavigate>
 			</template>
 			<template #next>
 				<div class="w-50 truncate">
@@ -44,5 +44,5 @@ if (page.value?.date) {
 }
 const [prev, next] = await queryArticlePreAndNext(route.params.id as string);
 
-useHead({ title: `${page.value.title}-Little Yuan's blog` });
+useHead({ title: `${page.value?.title}-Little Yuan's blog` });
 </script>

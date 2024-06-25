@@ -26,10 +26,10 @@
 						我在这个网站记录我的成长，努力 💪 做一个啥也不会的全栈工程师。
 					</p>
 					<div class="flex space-x-4">
-						<NuxtLink to="/blog">
+						<NuxtLink to="/blog" class="btn">
 							我的博客
 						</NuxtLink>
-						<NuxtLink to="/about">
+						<NuxtLink to="/about" class="btn">
 							关于我
 						</NuxtLink>
 					</div>
@@ -56,20 +56,9 @@
 </template>
 
 <script setup lang="ts">
-import { type ClassValue, clsx } from 'clsx';
-import { twMerge } from 'tailwind-merge'
-const route = useRoute();
 definePageMeta({
 	layout: false,
 	key: (route) => route.fullPath,
 });
-let delay = 0;
-
-// 每次调用，增加延时
-const getDelay = () => (delay += 200);
-
-const cn = (...inputs: ClassValue[]) => {
-	return twMerge(clsx(inputs));
-};
-
+useHead({ title: `Little Yuan's blog` });
 </script>

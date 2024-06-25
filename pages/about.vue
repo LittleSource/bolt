@@ -11,4 +11,6 @@
 definePageMeta({
 	layout: false,
 });
+
+useHead({ title: `About me - Little Yuan's blog` });
 </script>
