@@ -1,5 +1,5 @@
 <template>
-	<div class="w-full flex flex-col">
+	<div class="w-full flex flex-col px-4">
 		<div class="flex justify-end">
 			<div class="flex mt-5 w-120 justify-between items-center">
 				<NuxtLink to="/" class="nav-item">首页</NuxtLink>

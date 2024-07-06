@@ -1,8 +1,8 @@
 <template>
 	<div>
 		<NuxtLayout name="default">
-			<div class="flex flex-col items-center justify-center mb-30">
-				<div class="max-w-screen-md 2xl:max-w-7xl  gap-5 flex flex-col justify-center min-h-full px-6 md:px-10">
+			<div class="flex flex-col items-center justify-center mb-20">
+				<div class="max-w-screen-md 2xl:max-w-7xl gap-5 flex flex-col justify-center min-h-full px-6 md:px-5">
 					<p class="text-2xl md:text-5xl tracking-widest animate-fade-up animate-ease-in-out">
 						你好，我是
 					</p>

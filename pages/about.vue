@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<NuxtLayout name="default">
-			<div class="flex justify-center mt-10">
+			<div class="flex justify-center mt-10 px-4">
 				<ContentDoc path="/about" />
 			</div>
 		</NuxtLayout>
