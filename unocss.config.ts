@@ -13,7 +13,7 @@ export default defineConfig({
   shortcuts: [
     [
       "btn",
-      "px-4 py-2 rounded inline-block border-1 border-gray-500 text-white cursor-pointer hover:bg-slate-800",
+      "px-4 py-2 rounded inline-block border-1 text-gray-900 border-gray-500 cursor-pointer hover:bg-gray-100 dark:text-white dark:hover:bg-gray-900",
     ],
   ],
   presets: [
