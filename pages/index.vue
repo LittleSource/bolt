@@ -60,5 +60,5 @@ definePageMeta({
 	layout: false,
 	key: (route) => route.fullPath,
 });
-useHead({ title: `Little Yuan's blog` });
+useHead({ title: `我的主页 Little Yuan's blog` });
 </script>
