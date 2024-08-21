@@ -1,10 +1,12 @@
 ---
 title: git分支及开发规范
 date: 2024-08-21 22:18:55
-description: 每个仓库有有以下的 branch main 、 dev 、 feat 、 release 、 hotfix...
+description: 每个仓库有有以下的 branch main dev feat  release hotfix...
 ---
 
+
 ## branch
+
 每个仓库有有以下的 branch
 Branch: main 、 dev 、 feat 、 release 、 hotfix
 
@@ -30,6 +32,7 @@ hotfix 分支需要 main 切出，用于修复线上的bug，待 bug 修复完�
 ## git message提交规范
 
 参考angular团队的git提交规范
+
 ```yml
   - type
     - 用于说明 `commit` 的类别，只允许使用下面10个标识。
@@ -53,7 +56,8 @@ hotfix 分支需要 main 切出，用于修复线上的bug，待 bug 修复完�
 ```
 
 例如我改了几个文件，修复了某个bug，提交信息应该是
-```
+
+```shell
 fix: 修复了某个bug
 ```
 
