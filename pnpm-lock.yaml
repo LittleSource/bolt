@@ -11,18 +11,9 @@ importers:
       '@nuxt/content':
         specifier: ^2.12.1
         version: 2.12.1(ioredis@5.4.1)(magicast@0.3.4)(nuxt@3.12.2(@opentelemetry/api@1.9.0)(@parcel/watcher@2.4.1)(@types/node@20.14.5)(@unocss/reset@0.61.0)(encoding@0.1.13)(floating-vue@5.2.2(@nuxt/kit@3.12.2(magicast@0.3.4)(rollup@4.18.0))(vue@3.4.29))(ioredis@5.4.1)(magicast@0.3.4)(rollup@4.18.0)(terser@5.31.1)(unocss@0.61.0(@unocss/webpack@0.61.0(rollup@4.18.0)(webpack@5.92.0))(postcss@8.4.38)(rollup@4.18.0)(vite@5.3.1(@types/node@20.14.5)(terser@5.31.1)))(vite@5.3.1(@types/node@20.14.5)(terser@5.31.1)))(rollup@4.18.0)(vue@3.4.29)
-      clsx:
-        specifier: ^2.1.1
-        version: 2.1.1
       nuxt:
         specifier: ^3.12.1
         version: 3.12.2(@opentelemetry/api@1.9.0)(@parcel/watcher@2.4.1)(@types/node@20.14.5)(@unocss/reset@0.61.0)(encoding@0.1.13)(floating-vue@5.2.2(@nuxt/kit@3.12.2(magicast@0.3.4)(rollup@4.18.0))(vue@3.4.29))(ioredis@5.4.1)(magicast@0.3.4)(rollup@4.18.0)(terser@5.31.1)(unocss@0.61.0(@unocss/webpack@0.61.0(rollup@4.18.0)(webpack@5.92.0))(postcss@8.4.38)(rollup@4.18.0)(vite@5.3.1(@types/node@20.14.5)(terser@5.31.1)))(vite@5.3.1(@types/node@20.14.5)(terser@5.31.1))
-      tailwind-merge:
-        specifier: ^2.3.0
-        version: 2.3.0
-      typeit:
-        specifier: ^8.8.3
-        version: 8.8.3
     devDependencies:
       '@iconify-json/carbon':
         specifier: ^1.1.35
@@ -221,10 +212,6 @@ packages:
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0-0
-
-  '@babel/runtime@7.24.7':
-    resolution: {integrity: sha512-UwgBRMjJP+xv857DCngvqXI3Iq6J4v0wXmwc6sapg+zyhbwmQX67LUEFrkK5tbyJ30jGuG3ZvWpBiB9LCy1kWw==}
-    engines: {node: '>=6.9.0'}
 
   '@babel/standalone@7.24.7':
     resolution: {integrity: sha512-QRIRMJ2KTeN+vt4l9OjYlxDVXEpcor1Z6V7OeYzeBOw6Q8ew9oMTHjzTx8s6ClsZO7wVf6JgTRutihatN6K0yA==}
@@ -1115,9 +1102,6 @@ packages:
   '@types/unist@3.0.2':
     resolution: {integrity: sha512-dqId9J8K/vGi5Zr7oo212BGii5m3q5Hxlkwy3WpYuKPklmBEvsbMYYyLxAQpSffdLl/gdW0XUpKWFvYmyoWCoQ==}
 
-  '@types/web-animations-js@2.2.16':
-    resolution: {integrity: sha512-ATELeWMFwj8eQiH0KmvsCl1V2lu/qx/CjOBmv4ADSZS5u8r4reMyjCXtxG7khqyiwH3IOMNdrON/Ugn94OUcRA==}
-
   '@types/web-bluetooth@0.0.20':
     resolution: {integrity: sha512-g9gZnnXVq7gM7v3tJCWV/qw7w+KeOlSHAhgF9RytFyifW6AF61hdT2ucrYhPq9hLs5JIryeupHV3qGk95dH9ow==}
 
@@ -1717,10 +1701,6 @@ packages:
   cliui@8.0.1:
     resolution: {integrity: sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ==}
     engines: {node: '>=12'}
-
-  clsx@2.1.1:
-    resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
-    engines: {node: '>=6'}
 
   cluster-key-slot@1.1.2:
     resolution: {integrity: sha512-RMr0FhtfXemyinomL4hrWcYJxmX6deFdCxpJzhDttxgO1+bcCnkk+9drydLVDmAMG7NE6aN/fl4F7ucU/90gAA==}
@@ -3507,9 +3487,6 @@ packages:
     resolution: {integrity: sha512-DJnGAeenTdpMEH6uAJRK/uiyEIH9WVsUmoLwzudwGJUwZPp80PDBWPHXSAGNPwNvIXAbe7MSUB1zQFugFml66A==}
     engines: {node: '>=4'}
 
-  regenerator-runtime@0.14.1:
-    resolution: {integrity: sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==}
-
   rehype-external-links@3.0.0:
     resolution: {integrity: sha512-yp+e5N9V3C6bwBeAC4n796kc86M4gJCdlVhiMTxIrJG5UHDMh+PJANf9heqORJbt1nrCbDwIlAZKjANIaVBbvw==}
 
@@ -3850,9 +3827,6 @@ packages:
   tabbable@6.2.0:
     resolution: {integrity: sha512-Cat63mxsVJlzYvN51JmVXIgNoUokrIaT2zLclCXjRd8boZ0004U4KCs/sToJ75C6sdlByWxpYnb5Boif1VSFew==}
 
-  tailwind-merge@2.3.0:
-    resolution: {integrity: sha512-vkYrLpIP+lgR0tQCG6AP7zZXCTLc1Lnv/CCRT3BqJ9CZ3ui2++GPaGb1x/ILsINIMSYqqvrpqjUFsMNLlW99EA==}
-
   tapable@2.2.1:
     resolution: {integrity: sha512-GNzQvQTOIP6RyTfE2Qxb8ZVlNmw0n88vp1szwWRimP02mnTsx3Wtn5qRdqY9w2XduFNUgvOwhNnQsjwCp+kqaQ==}
     engines: {node: '>=6'}
@@ -3927,9 +3901,6 @@ packages:
   type-fest@3.13.1:
     resolution: {integrity: sha512-tLq3bSNx+xSpwvAJnzrK0Ep5CLNWjvFTOp71URMaAEWBfRb9nnJiBoUe0tF8bI4ZFO3omgBR6NvnbzVUT3Ly4g==}
     engines: {node: '>=14.16'}
-
-  typeit@8.8.3:
-    resolution: {integrity: sha512-K7nChkj6iyylUi713VBDULUXXLF0pfB6nFPVhNnXTKO2An7NzVz5fjoAHk2FAC3TFLiSnU+QsqhDmap17oBELw==}
 
   ufo@1.5.3:
     resolution: {integrity: sha512-Y7HYmWaFwPUmkoQCUIAYpKqkOf+SbVj/2fJJZ4RJMCfZp0rTGwRbzQD+HghfnhKOjL9E01okqz+ncJskGYfBNw==}
@@ -4616,10 +4587,6 @@ snapshots:
       '@babel/plugin-transform-typescript': 7.24.7(@babel/core@7.24.7)
     transitivePeerDependencies:
       - supports-color
-
-  '@babel/runtime@7.24.7':
-    dependencies:
-      regenerator-runtime: 0.14.1
 
   '@babel/standalone@7.24.7': {}
 
@@ -5650,8 +5617,6 @@ snapshots:
 
   '@types/unist@3.0.2': {}
 
-  '@types/web-animations-js@2.2.16': {}
-
   '@types/web-bluetooth@0.0.20': {}
 
   '@ungap/structured-clone@1.2.0': {}
@@ -6522,8 +6487,6 @@ snapshots:
       string-width: 4.2.3
       strip-ansi: 6.0.1
       wrap-ansi: 7.0.0
-
-  clsx@2.1.1: {}
 
   cluster-key-slot@1.1.2: {}
 
@@ -8704,8 +8667,6 @@ snapshots:
     dependencies:
       redis-errors: 1.2.0
 
-  regenerator-runtime@0.14.1: {}
-
   rehype-external-links@3.0.0:
     dependencies:
       '@types/hast': 3.0.4
@@ -9142,10 +9103,6 @@ snapshots:
 
   tabbable@6.2.0: {}
 
-  tailwind-merge@2.3.0:
-    dependencies:
-      '@babel/runtime': 7.24.7
-
   tapable@2.2.1: {}
 
   tar-stream@3.1.7:
@@ -9212,10 +9169,6 @@ snapshots:
   type-fest@0.21.3: {}
 
   type-fest@3.13.1: {}
-
-  typeit@8.8.3:
-    dependencies:
-      '@types/web-animations-js': 2.2.16
 
   ufo@1.5.3: {}
 

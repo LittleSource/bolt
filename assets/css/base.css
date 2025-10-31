@@ -30,9 +30,12 @@
 .font-lxgw {
   font-family: lxgw, roboto, helvetica neue, helvetica, arial, heti hei,
     sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol !important;
-  color: #212121;
 }
 
 .font-lxgw p {
   line-height: 2.1rem !important;
+}
+
+.article-color {
+  color: #212121;
 }

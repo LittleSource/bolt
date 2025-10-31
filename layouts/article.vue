@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<Navigation />
-		<div class="flex justify-center font-lxgw">
+		<div class="flex justify-center font-lxgw dark:text-white article-color">
 			<div class="flex-1"></div>
 			<div class="sm:w-1/3 sm:max-w-1/3 w-full px-2 py-4 sm:px-0">
 				<slot name="header"></slot>
