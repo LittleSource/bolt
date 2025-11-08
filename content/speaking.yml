@@ -1,0 +1,48 @@
+title: Talks & Workshops
+description: Explore talks and workshops I've given on UX design, front-end development, and building better digital products.
+links:
+  - label: Invite me to speak
+    size: md
+events:
+  - category: Conference
+    title: "Bridging the Gap: Design Systems for Designer-Developer Collaboration"
+    date: "2024-10-26"
+    location: "VueConf US, Miami, FL"
+    url: "#"
+  - category: Conference
+    title: "Intuitive Interfaces: Applying UX Principles in Nuxt.js Applications"
+    date: "2024-06-15"
+    location: "Nuxt Nation, Online"
+    url: "#"
+  - category: Conference
+    title: "Accessibility First: Building Inclusive Web Apps"
+    date: "2023-11-08"
+    location: "Boston Web Performance Meetup, Boston, MA"
+  - category: Live talk
+    title: "Mastering Component Design in Figma & Vue"
+    date: "2024-08-20"
+    location: "Design & Dev Boston Meetup, Boston, MA"
+    url: "#"
+  - category: Live talk
+    title: "From Wireframe to Web: A Practical Front-End Workflow"
+    date: "2024-03-05"
+    location: "Internal Workshop @ PreviousCompany Inc."
+  - category: Live talk
+    title: "The Power of User Research in Product Development"
+    date: "2023-09-12"
+    location: "Boston University Guest Lecture, Boston, MA"
+  - category: Podcast
+    title: "Designing for Developers: A UX Perspective"
+    date: "2024-07-18"
+    location: "Syntax.fm (Guest)"
+    url: "#"
+  - category: Podcast
+    title: "The Future of Front-End Frameworks & Design Tooling"
+    date: "2024-01-30"
+    location: "Design Details Podcast (Guest)"
+    url: "#"
+  - category: Podcast
+    title: "Building a Career in UX/UI & Development"
+    date: "2023-05-22"
+    location: "TechForward Boston Podcast"
+    url: "#"

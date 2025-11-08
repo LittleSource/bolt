@@ -1,36 +1,38 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
   modules: [
-    "@unocss/nuxt",
-    "@nuxt/content",
-    "@vueuse/nuxt",
-    "@nuxtjs/color-mode",
-    "dayjs-nuxt",
+    '@nuxt/eslint',
+    '@nuxt/image',
+    '@nuxt/ui',
+    '@nuxt/content',
+    '@vueuse/nuxt',
+    'nuxt-og-image',
+    'motion-v/nuxt'
   ],
-  content: {
-    // https://content.nuxtjs.org/api/configuration
-    highlight: {
-      preload: ["js", "dart", "go", "vue"],
-      // Theme used in all color schemes.
-      theme: {
-        // Default theme (same as single string)
-        default: "vitesse-dark",
-        // Theme used if `html.dark`
-        dark: "vitesse-dark",
-        // Theme used if `html.sepia`
-        light: "vitesse-light",
-      },
-    },
+
+  devtools: {
+    enabled: true
   },
-  unocss: {
-    preflight: false,
+
+  css: ['~/assets/css/main.css'],
+
+  compatibilityDate: '2024-11-01',
+
+  nitro: {
+    prerender: {
+      routes: [
+        '/'
+      ],
+      crawlLinks: true
+    }
   },
-  colorMode: {
-    classSuffix: "",
-  },
-  routeRules: {
-    "/": { prerender: true },
-    "/blog": { prerender: true },
-  },
-});
+
+  eslint: {
+    config: {
+      stylistic: {
+        commaDangle: 'never',
+        braceStyle: '1tbs'
+      }
+    }
+  }
+})

@@ -1,0 +1,118 @@
+seo:
+  title: "我的主页"
+  description: "Welcome to my portfolio! I'm Emma Thompson, a UX/UI designer and front-end developer based in Boston. I specialize in creating user-centered digital experiences that are both beautiful and functional."
+title: "Hey, I'm LittleYuan"
+description: "一名全栈开发工程师，喜欢 Vue、 TypeScript和 Golang\\owo/ ~ 我在这个网站记录我的成长，努力 💪 做一个啥也不会的全栈工程师。"
+hero:
+  links:
+    - label: "Use this template"
+      to: https://github.com/nuxt-ui-templates/portfolio
+      color: "neutral"
+  images:
+    - src: /hero/1.jpg
+      alt: Random Image 1
+    - src: /hero/2.jpg
+      alt: Random Image 2
+    - src: /hero/4.jpg
+      alt: Random Image 4
+    - src: /hero/5.jpg
+      alt: Random Image 5
+about:
+  title: "About Me"
+  description: |
+    As a UX/UI designer and front-end developer with 6 years of experience, I leverage my Boston University Interactive Design degree to craft user-centered digital experiences.
+    My approach blends creative strategy with technical expertise, transforming concepts into functional, purposeful digital products that seamlessly integrate design and technology.
+experience:
+  title: Work Experience
+  items:
+    - position: "Brand Designer at"
+      date: "2023 - Present"
+      company:
+        name: Nuxt
+        logo: "i-simple-icons-nuxtdotjs"
+        url: "https://nuxt.com"
+        color: "#00DC82"
+    - position: "Assets Designer at"
+      date: "2022 - 2023"
+      company:
+        name: Raycast
+        logo: "i-simple-icons-raycast"
+        url: "https://raycast.com"
+        color: "#FF6363"
+    - position: "Senior UX/UI Designer at"
+      date: "2020 - 2021"
+      company:
+        name: Linear
+        logo: "i-simple-icons-linear"
+        url: "https://linear.app"
+        color: "#5E6AD2"
+testimonials:
+  - quote: "Emma's approach to UX design completely transformed our product. She has a rare ability to balance beautiful aesthetics with functional simplicity. The redesign not only looked better, but it reduced our customer support tickets by 40% and increased conversion rates across all key metrics."
+    author:
+      name: 'Sarah Chen'
+      description: 'Product Director at Bloom Finance'
+      avatar:
+        src: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80'
+        srcset: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x'
+  - quote: "Working with Emma was the best decision we made for our startup. She didn't just deliver designs—she challenged our assumptions, conducted thorough user research, and created an experience that truly resonated with our audience. Her technical knowledge of front-end development meant the handoff to our engineering team was seamless."
+    author:
+      name: 'Michael Rodriguez'
+      description: 'Co-founder of Wavelength Music'
+      avatar:
+        src: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80'
+        srcset: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x'
+  - quote: "Emma stands out in her ability to translate complex sustainability data into intuitive interfaces. Her work on EcoTrack wasn't just visually stunning—it fundamentally changed how our users interact with environmental information. She approaches each problem with both creativity and analytical rigor, which is exactly what we needed."
+    author:
+      name: 'Dr. Aisha Johnson'
+      description: 'Chief Innovation Officer at GreenTech Solutions'
+      avatar:
+        src: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=40&h=40&q=80'
+        srcset: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x'
+blog:
+  title: "最新文章"
+  description: "Some of my recent thoughts"
+faq:
+  title: FAQ
+  description: Frequently asked questions
+  categories:
+    - title: 服务与流程
+      questions:
+        - label: 您提供哪些服务？
+          content: |
+            我专注于用户体验/用户界面设计和前端开发。这包括用户研究、线框图、交互式原型设计、创建直观的用户界面、构建响应式网站和 Web 应用程序（特别是使用 Vue.js/Nuxt.js），以及开发设计系统。我的目标是创建从概念到部署的无缝数字体验。
+        - label: 您的设计流程是怎样的？
+          content: |
+            我的流程是协作和迭代的，通常包括发现与研究、构思与原型设计、用户测试、视觉设计等阶段，并在实施过程中与开发团队密切合作。我根据项目需求调整流程，始终专注于以用户为中心的解决方案。
+        - label: 您与初创公司合作吗？
+          content: |
+            当然！我喜欢与初创公司合作，帮助他们塑造产品愿景，并从头开始创建用户友好的界面。我可以调整我的流程以适应快节奏的初创公司环境。
+    - title: 定价与时间表
+      questions:
+        - label: 项目通常需要多少费用？
+          content: |
+            项目成本因范围、复杂性、功能和时间表而异。对于全面的用户体验/用户界面设计和前端开发项目，我的服务通常起价约为 5,000 美元，平均项目范围在 8,000 美元到 25,000 美元之间。对于咨询或特定的设计任务，我的日费率为 700 美元。
+        - label: 您的付款条款是怎样的？
+          content: |
+            我通常要求支付 40% 的定金以安排项目并开始工作，剩余的 60% 在项目成功完成和交付后支付。我接受银行转账和 Stripe 付款。
+        - label: 一个典型的项目需要多长时间？
+          content: |
+            时间表很大程度上取决于项目的范围和复杂性。较小的项目可能需要 3-4 周，而较大、更复杂的项目可能需要 2 到 4 个月。我总是在初步发现阶段后提供详细的时间表估算。
+        - label: 您提供保留服务或持续支持吗？
+          content: |
+            是的，对于需要持续设计支持、功能开发或维护的客户，我提供根据特定需求量身定制的月度保留选项。如果您对此感兴趣，我们可以讨论。
+    - title: 关于我
+      questions:
+        - label: 您最喜欢您的工作的哪一点？
+          content: |
+            我喜欢通过设计和技术解决复杂问题的挑战。看到人们与我创造的东西互动，并发现它真正有用且易于导航，这非常有意义。弥合用户需求和技术可能性之间的鸿沟是我真正兴奋的地方。
+        - label: 工作之余您有什么爱好？
+          content: |
+            当我不在设计或编码时，我喜欢探索波士顿的街区，尝试新的咖啡馆，并在附近的保护区徒步旅行。我还热衷于摄影，偶尔也会为开源项目做贡献。
+    - title: 关于我
+      questions:
+        - label: 您最喜欢您的工作的哪一点？
+          content: |
+            我喜欢通过设计和技术解决复杂问题的挑战。看到人们与我创造的东西互动，并发现它真正有用且易于导航，这非常有意义。弥合用户需求和技术可能性之间的鸿沟是我真正兴奋的地方。
+        - label: 工作之余您有什么爱好？
+          content: |
+            当我不在设计或编码时，我喜欢探索波士顿的街区，尝试新的咖啡馆，并在附近的保护区徒步旅行。我还热衷于摄影，偶尔也会为开源项目做贡献。
