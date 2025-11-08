@@ -53,7 +53,7 @@ const formatDate = (dateString: string) => {
 
 <template>
   <UMain class="mt-20 px-2">
-    <UContainer class="relative min-h-screen">
+    <UContainer class="relative min-h-screen px-0">
       <UPage v-if="page">
         <ULink
           to="/blog"

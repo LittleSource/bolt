@@ -32,9 +32,9 @@ useSeoMeta({
   <UPage v-if="page">
     <UPageHero
       :title="page.title"
-      :description="page.description"
       :links="page.links"
       :ui="{
+        container: 'pt-16 pb-8',
         title: '!mx-0 text-left',
         description: '!mx-0 text-left',
         links: 'justify-start'
