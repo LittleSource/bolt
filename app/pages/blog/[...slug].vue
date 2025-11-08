@@ -101,7 +101,7 @@ const formatDate = (dateString: string) => {
             /> -->
           </div>
         </div>
-        <UPageBody class="max-w-3xl mx-auto">
+        <UPageBody class="max-w-3xl mx-auto  text-lg">
           <ContentRenderer
             v-if="page.body"
             :value="page"
