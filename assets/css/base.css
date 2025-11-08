@@ -24,12 +24,13 @@
 
 @font-face {
   font-family: lxgw;
-  src: url("../font/LXGWWenKai-Regular.ttf");
+  src: url("../fonts/LXGWWenKai-Regular.ttf");
 }
 
 .font-lxgw {
-  font-family: lxgw, roboto, helvetica neue, helvetica, arial, heti hei,
+  /* font-family: lxgw, roboto, helvetica neue, helvetica, arial, heti hei,
     sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol !important;
+  font-weight: 500; */
 }
 
 .font-lxgw p {
