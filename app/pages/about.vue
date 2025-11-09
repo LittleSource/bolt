@@ -45,9 +45,9 @@ useSeoMeta({
         container: '!pt-0'
       }"
     >
-      <MDC
-        :value="page.content"
-        unwrap="p"
+      <ContentRenderer
+        :value="page"
+        class="prose dark:prose-invert"
       />
       <div class="flex flex-row justify-center items-center py-10 space-x-[-2rem]">
         <PolaroidItem

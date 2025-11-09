@@ -63,7 +63,7 @@ const formatDate = (dateString: string) => {
           Blog
         </ULink>
         <div class="flex flex-col gap-3 mt-8">
-          <div class="flex text-xs text-muted items-center justify-center gap-2">
+          <div class="flex text-xs text-muted items-center justify-center gap-2  h-[40px]">
             <UUser
               name="Little Yuan"
               :avatar="{
@@ -71,18 +71,19 @@ const formatDate = (dateString: string) => {
                 icon: 'i-lucide-image'
               }"
             />
-            <span
-              v-if="page.date"
-              class="mt-1"
-            >
-              {{ formatDate(page.date) }}
-            </span>
-            <span v-if="page.date && page.minRead">
-              -
-            </span>
-            <span v-if="page.minRead">
-              {{ page.minRead }} MIN READ
-            </span>
+            <div class="flex items-center gap-1 text-sm">
+              <span
+                v-if="page.date"
+              >
+                {{ formatDate(page.date) }}
+              </span>
+              <span v-if="page.date && page.minRead">
+                -
+              </span>
+              <span v-if="page.minRead">
+                {{ page.minRead }} MIN READ
+              </span>
+            </div>
           </div>
 
           <h1 class="text-4xl font-medium  max-w-3xl mx-auto mt-4">
@@ -101,7 +102,7 @@ const formatDate = (dateString: string) => {
             /> -->
           </div>
         </div>
-        <UPageBody class="max-w-3xl mx-auto  text-lg">
+        <UPageBody class="max-w-3xl mx-auto text-[1.16rem]">
           <ContentRenderer
             v-if="page.body"
             :value="page"

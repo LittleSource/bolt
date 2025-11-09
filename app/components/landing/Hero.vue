@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { IndexCollectionItem } from '@nuxt/content'
 
-const { footer, global } = useAppConfig()
+const { global } = useAppConfig()
 
 defineProps<{
   page: IndexCollectionItem
@@ -129,7 +129,7 @@ defineProps<{
         </div>
       </Motion>
 
-      <div class="gap-x-4 inline-flex mt-4">
+      <!-- <div class="gap-x-4 inline-flex mt-4">
         <Motion
           v-for="(link, index) of footer?.links"
           :key="index"
@@ -153,7 +153,7 @@ defineProps<{
             v-bind="{ size: 'md', color: 'neutral', variant: 'ghost', ...link }"
           />
         </Motion>
-      </div>
+      </div> -->
     </template>
 
     <UMarquee

@@ -1,7 +1,6 @@
 <template>
   <div
-    class="px-4 py-1 rounded-md my-4"
-    style="background-color: #222;"
+    class="px-4 py-[1px] rounded-md my-4 dark:bg-[#222222] bg-[#f5f5f5]"
   >
     <slot />
   </div>

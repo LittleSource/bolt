@@ -26,15 +26,20 @@ export default defineAppConfig({
     credits: `陇ICP备2022000468号-1 • © LittleYuan  ${new Date().getFullYear()}`,
     colorMode: false,
     links: [{
-      'icon': 'i-simple-icons-x',
-      'to': 'https://go.nuxt.com/x',
+      'icon': 'i-simple-icons-juejin',
+      'to': 'https://juejin.cn/user/2840793779030478',
       'target': '_blank',
-      'aria-label': 'Nuxt on X'
+      'aria-label': 'LittleYuan on juejin'
+    }, {
+      'icon': 'i-simple-icons-substack',
+      'to': 'https://substack.com/@littleyuan',
+      'target': '_blank',
+      'aria-label': 'LittleYuan on Substack'
     }, {
       'icon': 'i-simple-icons-github',
-      'to': 'https://github.com/nuxt/ui',
+      'to': 'https://github.com/LittleSource',
       'target': '_blank',
-      'aria-label': 'Nuxt UI on GitHub'
+      'aria-label': 'LittleYuan on GitHub'
     }]
   }
 })

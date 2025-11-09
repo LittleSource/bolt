@@ -1,12 +1,12 @@
 seo:
   title: "我的主页"
-  description: "Welcome to my portfolio! I'm Emma Thompson, a UX/UI designer and front-end developer based in Boston. I specialize in creating user-centered digital experiences that are both beautiful and functional."
+  description: "Welcome to my portfolio! I'm LittleYuan, a Full-stack developer based in China. I specialize in creating user-centered digital experiences that are both beautiful and functional."
 title: "Hey, I'm LittleYuan"
 description: "一名全栈开发工程师，喜欢 Vue、 TypeScript和 Golang\\owo/ ~ 我在这个网站记录我的成长，努力 💪 做一个啥也不会的全栈工程师。"
 hero:
   links:
     - label: "Use this template"
-      to: https://github.com/nuxt-ui-templates/portfolio
+      to: https://github.com/LittleSource/bolt
       color: "neutral"
   images:
     - src: /hero/1.jpg

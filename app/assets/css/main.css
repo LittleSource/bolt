@@ -4,8 +4,8 @@
 @source "../../../content/**/*";
 
 @theme static {
-  --font-sans: 'Public Sans', sans-serif;
-  --font-serif: 'Instrument Serif', serif;
+  --font-sans: "Public Sans", sans-serif;
+  --font-serif: "Instrument Serif", serif;
 }
 
 :root {
@@ -22,4 +22,16 @@
     color: #ffffff;
     background-color: #474747;
   }
+}
+
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem; /* Adjust as needed for spacing between badges */
+}
+
+.badge-row img {
+  height: 30px;
+  cursor: point;
+  width: auto;
 }
