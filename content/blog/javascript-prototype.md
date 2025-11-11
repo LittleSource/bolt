@@ -1,7 +1,8 @@
 ---
 title: JavaScript原型&原型链
-date: 2022-11-10 14:04:11
+date: 2022-11-10T14:04:11.000Z
 ---
+
 js一般很难理解原型和原型链的概念，但原型和原型链又是js中最重要的点之一。从jQuery到现在最火的框架之一Vue，原型的应用无处不在，那我们该怎么学好JavaScript的原型和原型链呢？
 
 ### 前言
@@ -15,14 +16,12 @@ js一般很难理解原型和原型链的概念，但原型和原型链又是js�
 
 js的初学者一般很难理解原型和原型链的概念，但原型和原型链又是js中最重要的点之一。从jQuery到现在最火的框架之一Vue，原型的应用无处不在，那我们该怎么学好JavaScript的原型和原型链呢？
 
-想要弄清楚原型和原型链，这几个属性必须要搞清楚，__proto__、prototype、 constructor。
+想要弄清楚原型和原型链，这几个属性必须要搞清楚，**proto**、prototype、 constructor。
 其次你要知道js中对象和函数的关系，函数其实是对象的一种。
 最后你要知道函数、构造函数的区别，任何函数都可以作为构造函数，但是并不能将任意函数叫做构造函数，只有当一个函数通过new关键字调用的时候才可以成为构造函数。如：
 
 ```js
-var Parent = function(){
-
-}
+var Parent = function () {};
 //定义一个函数，那它只是一个普通的函数，下面我们让这个函数变得不普通
 var p1 = new Parent();
 //这时这个Parent就不是普通的函数了，它现在是一个构造函数。因为通过new关键字调用了它
@@ -31,13 +30,13 @@ var p1 = new Parent();
 
 如果到这你都能理解，
 
-我们再引出一个概念，开始说过了要想清楚原型就要先搞清楚这三个属性，__proto__、prototype、 constructor。
+我们再引出一个概念，开始说过了要想清楚原型就要先搞清楚这三个属性，**proto**、prototype、 constructor。
 
 我们记住两点
 
-1. __proto__、 constructor属性是对象所独有的；
+1. **proto**、 constructor属性是对象所独有的；
 2. prototype属性是函数独有的；
-3. 上面说过js中函数也是对象的一种，那么函数同样也有属性__proto__、 constructor；
+3. 上面说过js中函数也是对象的一种，那么函数同样也有属性**proto**、 constructor；
 
 下面开始进入正题，我将上面的一张图拆分成3张图，分别讲解对应的3个属性。
 
@@ -60,7 +59,7 @@ prototype设计之初就是为了实现继承，让由特定函数创建的所�
 
 ### 2.proto属性
 
-> __proto__属性相当于通往prototype（“琅琊福地”）唯一的路（指针）
+> **proto**属性相当于通往prototype（“琅琊福地”）唯一的路（指针）
 > 让“徒弟”、“徒孙” 们找到自己“师父”、“师父的师父” 提供给自己的方法和属性
 
 ![img3](/javascript-prototype/3.png)
@@ -70,7 +69,7 @@ prototype篇章我们说到，Parent.prototype上添加的属性和方法叫做�
 
 `p1.__proto__ === Parent.prototype; // true`
 
-__proto__通常称为隐式原型，prototype通常称为显式原型，那我们可以说一个对象的隐式原型指向了该对象的构造函数的显式原型。那么我们在显式原型上定义的属性方法，通过隐式原型传递给了构造函数的实例。这样一来实例就能很容易的访问到构造函数原型上的方法和属性了。
+**proto**通常称为隐式原型，prototype通常称为显式原型，那我们可以说一个对象的隐式原型指向了该对象的构造函数的显式原型。那么我们在显式原型上定义的属性方法，通过隐式原型传递给了构造函数的实例。这样一来实例就能很容易的访问到构造函数原型上的方法和属性了。
 我们之前也说过`__proto__`属性是对象（包括函数）独有的，那么`Parent.prototype`也是对象，那它有隐式原型么？又指向谁？
 
 `Parent.prototype.__proto__ === Object.prototype; //true`
@@ -79,7 +78,7 @@ __proto__通常称为隐式原型，prototype通常称为显式原型，那我�
 
 ```js
 //我们并没有在Parent中定义任何方法属性，但是我们可以调用
-p1.toString();//hasOwnProperty 等等的一些方法
+p1.toString(); //hasOwnProperty 等等的一些方法
 ```
 
 我们可以调用很多我们没有定义的方法，这些方法是哪来的呢？现在引出原型链的概念，当我们调用`p1.toString()`的时候，先在p1对象本身寻找，没有找到则通过`p1.__proto__`找到了原型对象`Parent.prototype`，也没有找到，又通过`Parent.prototype.__proto__`找到了上一层原型对象`Object.prototype`。在这一层找到了toString方法。返回该方法供p1使用。
@@ -107,9 +106,9 @@ console.log(Parent.constructor); // ƒ Function() { [native code] }
 通过输出看到Parent函数的构造函数是Function()，这点也不奇怪，因为我们每次定义函数其实都是调用了new Function()，下面两种效果是一样的。
 
 ```js
-var fn1 = new Function('msg','alert(msg)');
-function fn1(msg){
-    alert(msg);
+var fn1 = new Function("msg", "alert(msg)");
+function fn1(msg) {
+  alert(msg);
 }
 ```
 

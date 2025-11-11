@@ -1,6 +1,6 @@
 ---
 title: Vue3 按键修饰符的使用场景讲解
-date: 2022-09-22 14:32:37
+date: 2022-09-22T14:32:37.000Z
 description: 在vue中，对于键盘事件，我们可以使用@keyup或者@keydown等事件去处理...
 ---
 
@@ -50,25 +50,29 @@ $(document).keydown(function (e) {
 
 ```vue
 <template>
-  <input v-model="input" placeholder="请输入内容" @keydown.enter="handleKeyBoard($event, handleEnter)"/>
+  <input
+    v-model="input"
+    placeholder="请输入内容"
+    @keydown.enter="handleKeyBoard($event, handleEnter)"
+  />
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
-import { handleKeyBoard } from '@/composition/_keyboard'
+import { defineComponent, ref } from "vue";
+import { handleKeyBoard } from "@/composition/_keyboard";
 
 export default defineComponent({
   setup() {
     const handleEnter = (e: KeyboardEvent) => {
-      console.log('触发enter', e)
-    }
+      console.log("触发enter", e);
+    };
     return {
-      input: ref(''),
+      input: ref(""),
       handleEnter,
-      handleKeyBoard
-    }
-  }
-})
+      handleKeyBoard,
+    };
+  },
+});
 </script>
 ```
 
@@ -97,14 +101,18 @@ Web 应用快捷键支持（一）：正确处理 Keyboard Event
 ![code](/vue-key/1.png)
 
 ```vue
-<input v-model="input" placeholder="请输入内容" @keydown.enter.exact="handleKeyBoard($event, handleEnter)" />
+<input
+  v-model="input"
+  placeholder="请输入内容"
+  @keydown.enter.exact="handleKeyBoard($event, handleEnter)"
+/>
 ```
 
 处理组件的键盘事件
 如果我们在组件上使用@keydown是没有效果的，比如Element UI 的`<el-input>`。为了解决这个问题，在 vue2 中我们可以使用.native修饰符，它可以监听组件根元素的原生事件。
 
 ```vue
- <el-input v-model="input" @keydown.enter.native="handleEnter"></el-input>
+<el-input v-model="input" @keydown.enter.native="handleEnter"></el-input>
 ```
 
 在 vue3 中，.native修饰符被移除了：移除 v-on.native 修饰符。同时，新增的 emits 选项允许子组件定义真正会被触发的事件。对于子组件中未被定义为组件触发的所有事件监听器，Vue 现在将把它们作为原生事件监听器添加到子组件的根元素中 (除非在子组件的选项中设置了 inheritAttrs: false)。

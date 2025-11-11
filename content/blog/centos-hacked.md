@@ -1,9 +1,10 @@
 ---
 title: centos服务器被入侵
 description: 登录服务器出现-bash-4.2#，那么有可能你的机器已经被入侵了，附上我遇到的这种情况，看看对你有没有帮助。
-date: 2022-09-20 10:33:57
+date: 2022-09-20T10:33:57.000Z
 ---
-## root用户登录出现-bash-4.2 #
+
+## root用户登录出现-bash-4.2
 
 在修复过.bashrc文件或者恢复过.bashrc后，仍然出现-bash-4.2#，那么有可能你的机器已经被入侵了，附上我遇到的这种情况，看看对你有没有帮助。
 服务器入侵检查和处理
@@ -71,7 +72,7 @@ fi
 
 强制删除 /usr/bin/sshd
 
-恢复.bashrc文件 cp /etc/skel/.bash* /root/
+恢复.bashrc文件 cp /etc/skel/.bash\* /root/
 
 修改.bashrc文件
 

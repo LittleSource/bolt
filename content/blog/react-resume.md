@@ -1,8 +1,9 @@
 ---
-title: '用React写了一个超酷的简历模板'
-description: '说到简历这个事情，咱们程序员肯定不能用Word模板随便整一个,所以决定打算自己写一个~'
-date: 2022-08-18 21:12:02
+title: "用React写了一个超酷的简历模板"
+description: "说到简历这个事情，咱们程序员肯定不能用Word模板随便整一个,所以决定打算自己写一个~"
+date: 2022-08-18T21:12:02.000Z
 ---
+
 ## 🪶前言
 
 我前段时间投简历的时候，尝试投过20份简历感受下市场，结果只有4份简历给了回应，这在往年是不可能的情况。
@@ -12,6 +13,7 @@ date: 2022-08-18 21:12:02
 说到简历这个事情，咱们程序员肯定不能用Word模板随便整一个，特别是咱前端(O(∩_∩)O哈哈~我算半个前端)。之前一直在用github某位大佬做的网页版简历，由于项目太老，最近发现有些依赖下载不到了，而且简历布局我也不是很喜欢，所以决定打算自己写一个~~~
 
 废话到此为止，上图👇
+
 ## 🪶效果
 
 ❤️‍🔥[在线体验](https://resume.52ym.vip/)
@@ -25,6 +27,7 @@ Github https://github.com/LittleSource/resume
 **适配手机端**
 
 ![4b8cdb07-bdd0-4ec9-b8c9-a141d7e65e48.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/64cd22a52a184ae5a4587972fe4ee58d~tplv-k3u1fbpfcp-watermark.image?)
+
 ## 🪶Features
 
 - 💥`react`+`ts`+`vite`赶时髦儿的技术栈

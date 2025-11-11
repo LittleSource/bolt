@@ -1,7 +1,8 @@
 ---
 title: Code-server搭建web IDE
-date: 2021-04-06 18:52:11
+date: 2021-04-06T18:52:11.000Z
 ---
+
 最近买了个平板电脑，想着能在图书馆安安静静的刷Leetcode，但是网站上的编辑器一点提示都没有，纯文本手写效率有点低
 
 > 传送门 [code-server gitHub](https://github.com/cdr/code-server)
@@ -18,39 +19,39 @@ code server 的目标是为开发者构建一个便捷统一的开发环境，�
 
 1. 使用github文档提供的命令
 
-    ``` shell
-    curl -fsSL https://code-server.dev/install.sh | sh -s -- --dry-run
-    ```
+   ```shell
+   curl -fsSL https://code-server.dev/install.sh | sh -s -- --dry-run
+   ```
 
 2. 然后按控制台输出的几个步骤操作:
 
-    ![控制台显示](/code-server/code.png)
+   ![控制台显示](/code-server/code.png)
 
 3. 按上述步骤操作完成后，如果要允许任意IP访问得修改一下配置文件
 
- ``` shell
-  vi ~/.config/code-server/config.yaml
- ```
+```shell
+ vi ~/.config/code-server/config.yaml
+```
 
- 改成如下代码
+改成如下代码
 
-  ```shell
-        bind-addr: 0.0.0.0:8080
-        auth: password
-        password: 123456
-        cert: false
-  ```
+```shell
+      bind-addr: 0.0.0.0:8080
+      auth: password
+      password: 123456
+      cert: false
+```
 
 4. 启动
 
-    1 后台启动
+   1 后台启动
 
-    ``` shell
-    sudo systemctl enable --now code-server@$USER
-    ```
+   ```shell
+   sudo systemctl enable --now code-server@$USER
+   ```
 
-    2 前台启动
+   2 前台启动
 
-    ``` shell
-    code-server
-    ```
+   ```shell
+   code-server
+   ```
