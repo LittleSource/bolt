@@ -26,6 +26,11 @@ export default defineAppConfig({
     credits: `陇ICP备2022000468号-1 • © LittleYuan  ${new Date().getFullYear()}`,
     colorMode: false,
     links: [{
+      'icon': 'i-lucide-wallpaper',
+      'to': 'https://photo.52ym.vip',
+      'target': '_blank',
+      'aria-label': 'LittleYuan on photo'
+    }, {
       'icon': 'i-simple-icons-juejin',
       'to': 'https://juejin.cn/user/2840793779030478',
       'target': '_blank',
