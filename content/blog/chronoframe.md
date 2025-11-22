@@ -5,11 +5,16 @@ seo:
   title: Chronoframe file
   description: 自托管个人图库应用程序，具有在线照片管理和相册功能，支持动态照片、EXIF 解析、地理位置识别和探索地图。一款流畅的照片显示和管理应用程序，支持多种图像格式和大尺寸图像渲染。
 date: 2025-11-21T21:46:57.000Z
+image: /content/chronoframe/20251122102720.png
 categories:
   - null
 tags:
   - 软件
 ---
+
+一个自托管个人图库应用程序，具有在线照片管理和相册功能，支持动态照片、EXIF 解析、地理位置识别和探索地图。流畅的照片显示和管理应用程序，支持多种图像格式和大尺寸图像渲染。
+
+![image.png](/content/chronoframe/20251122102720.png)
 
 1. 拉取镜像
    ```shell
@@ -20,6 +25,7 @@ tags:
    mkdir chronoframe
    ```
 3. 创建 .env 文件
+
    ```yaml
    # 管理员邮箱（必须）
    CFRAME_ADMIN_EMAIL=littley@outlook.ie
@@ -58,6 +64,7 @@ tags:
    # 会话密码（必须，32 位随机字符串）
    NUXT_SESSION_PASSWORD=GWLyi2zrSo83DQMS1ZQvqW6wWlyUzmCB
    ```
+
 4. 创建 docker-compose.yml 文件
    ```yaml
    services:
@@ -79,7 +86,7 @@ tags:
 
 **使用指南**
 
-> 如未配置 CFRAME\_ADMIN\_EMAIL 和 CFRAME\_ADMIN\_PASSWORD，默认账号如下：
+> 如未配置 CFRAME_ADMIN_EMAIL 和 CFRAME_ADMIN_PASSWORD，默认账号如下：
 >
 > - 邮箱: `admin@chronoframe.com`
 > - 密码: `CF1234@!`
