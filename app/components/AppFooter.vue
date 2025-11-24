@@ -8,7 +8,17 @@ const { footer } = useAppConfig()
     :ui="{ left: 'text-muted text-xs' }"
   >
     <template #left>
-      {{ footer.credits }}
+      <span>
+        <a
+          href="https://beian.miit.gov.cn/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {{ footer.icp }}
+        </a>
+        ©
+        {{ footer.credits + " " + new Date().getFullYear() }}
+      </span>
     </template>
 
     <template #right>

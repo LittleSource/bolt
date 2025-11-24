@@ -23,7 +23,8 @@ export default defineAppConfig({
     }
   },
   footer: {
-    credits: `陇ICP备2022000468号-1 • © LittleYuan  ${new Date().getFullYear()}`,
+    icp: '陇ICP备2022000468号-1',
+    credits: `LittleYuan`,
     colorMode: false,
     links: [{
       'icon': 'i-lucide-wallpaper',
