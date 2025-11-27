@@ -19,8 +19,8 @@ useHead({
 
 useSeoMeta({
   titleTemplate: '%s - Little Yuan`s blog',
-  ogImage: 'https://ui.nuxt.com/assets/templates/nuxt/portfolio-light.png',
-  twitterImage: 'https://ui.nuxt.com/assets/templates/nuxt/portfolio-light.png',
+  ogImage: 'https://cdn.52ym.vip/MY/portfolio-light.png',
+  twitterImage: 'https://cdn.52ym.vip/MY/portfolio-light.png',
   twitterCard: 'summary_large_image'
 })
 
