@@ -17,13 +17,17 @@ tags:
 ![image.png](/content/chronoframe/20251122102720.png)
 
 1. 拉取镜像
+
    ```shell
    docker pull ghcr.io/hoshinosuzumi/chronoframe:latest
    ```
+
 2. 创建文件夹 chronoframe
+
    ```shell
    mkdir chronoframe
    ```
+
 3. 创建 .env 文件
 
    ```yaml
@@ -66,6 +70,7 @@ tags:
    ```
 
 4. 创建 docker-compose.yml 文件
+
    ```yaml
    services:
      chronoframe:
@@ -79,7 +84,9 @@ tags:
        env_file:
          - .env
    ```
+
 5. 启动
+
    ```bash
    docker-compose up -d
    ```
