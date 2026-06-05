@@ -5,7 +5,7 @@ export default defineAppConfig({
       light: './avatar.jpg',
       alt: 'My profile picture'
     },
-    meetingLink: 'https://cal.com/',
+    meetingLink: 'https://ai.52ym.vip',
     email: 'littley@outlook.ie',
     available: true
   },

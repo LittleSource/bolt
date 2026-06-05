@@ -5,8 +5,8 @@ title: "Hey, I'm LittleYuan"
 description: "一名全栈开发工程师，喜欢 Vue、 TypeScript和 Golang\\owo/ ~ 我在这个网站记录我的成长，努力 💪 做一个啥也不会的全栈工程师。"
 hero:
   links:
-    - label: "Use this template"
-      to: https://github.com/LittleSource/bolt
+    - label: "源梦工坊AI生图"
+      to: https://ai.52ym.vip
       color: "neutral"
   images:
     - src: /hero/1.jpg
