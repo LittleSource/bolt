@@ -1,6 +1,10 @@
 ---
 title: JavaScript原型&原型链
 date: 2022-11-10T14:04:11.000Z
+categories:
+  - 前端
+tag:
+  - JavaScript
 ---
 
 js一般很难理解原型和原型链的概念，但原型和原型链又是js中最重要的点之一。从jQuery到现在最火的框架之一Vue，原型的应用无处不在，那我们该怎么学好JavaScript的原型和原型链呢？

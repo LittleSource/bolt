@@ -7,7 +7,7 @@ seo:
 date: 2025-11-21T21:46:57.000Z
 image: /content/chronoframe/20251122102720.png
 categories:
-  - null
+  - 软件
 tags:
   - 软件
 ---

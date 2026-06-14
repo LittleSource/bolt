@@ -4,6 +4,7 @@ import { mapContentNavigation } from '@nuxt/ui/utils/content'
 import { findPageBreadcrumb } from '@nuxt/content/utils'
 
 const route = useRoute()
+const router = useRouter()
 
 const { data: page } = await useAsyncData(route.path, () =>
   queryCollection('blog').path(route.path).first()
@@ -49,6 +50,11 @@ const formatDate = (dateString: string) => {
     day: 'numeric'
   })
 }
+
+// 点击分类跳转到博客列表页并选中该分类
+const goToCategory = (category: string) => {
+  router.push({ path: '/blog', query: { category } })
+}
 </script>
 
 <template>
@@ -63,7 +69,7 @@ const formatDate = (dateString: string) => {
           Blog
         </ULink>
         <div class="flex flex-col gap-3 mt-8">
-          <div class="flex text-xs text-muted items-center justify-center gap-2  h-[40px]">
+          <div class="flex text-xs text-muted items-center justify-center gap-2 flex-wrap h-[40px]">
             <UUser
               name="Little Yuan"
               :avatar="{
@@ -84,11 +90,29 @@ const formatDate = (dateString: string) => {
                 {{ page.minRead }} MIN READ
               </span>
             </div>
+
+            <!-- 分类标签 -->
+            <div
+              v-if="page.categories && page.categories.length > 0"
+              class="flex items-center gap-1.5"
+            >
+              <UBadge
+                v-for="cat in page.categories"
+                :key="cat"
+                :label="cat"
+                size="sm"
+                variant="soft"
+                color="neutral"
+                class="cursor-pointer hover:opacity-80 transition-opacity"
+                @click="goToCategory(cat)"
+              />
+            </div>
           </div>
 
           <h1 class="text-4xl font-medium  max-w-3xl mx-auto mt-4">
             {{ page.title }}
           </h1>
+
           <!-- <p class="text-muted text-center max-w-2xl mx-auto">
             {{ page.description }}
           </p> -->

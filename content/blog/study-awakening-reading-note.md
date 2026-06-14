@@ -2,6 +2,8 @@
 title: 《学习觉醒》读书笔记
 description: 最重要的能力是获得能力的能力。无意间在抖音刷到了这本书，主要讲的是学习的方法。正好最近在学英语，就随手买了一本，看看能不能找到一些有用的、高效的学习方法。
 image: /content/study-awakening-reading-note/book.png
+categories:
+  - 读书笔记
 tags:
   - 读书笔记
 date: 2025-11-16T16:00:00.000Z

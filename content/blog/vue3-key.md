@@ -2,6 +2,8 @@
 title: Vue3 按键修饰符的使用场景讲解
 date: 2022-09-22T14:32:37.000Z
 description: 在vue中，对于键盘事件，我们可以使用@keyup或者@keydown等事件去处理...
+categories:
+  - 前端
 ---
 
 ## 监听键盘事件

@@ -2,6 +2,8 @@
 title: Git分支及开发规范
 date: 2024-08-21T22:18:55.000Z
 description: 每个仓库有有以下的 branch main dev feat  release hotfix...
+categories:
+  - 开发规范
 ---
 
 ## branch

@@ -92,7 +92,9 @@ export default defineContentConfig({
         minRead: z.number(),
         date: z.date(),
         image: z.string().nonempty().editor({ input: 'media' }),
-        author: createAuthorSchema()
+        author: createAuthorSchema(),
+        categories: z.array(z.string()).optional(),
+        tags: z.array(z.string()).optional()
       })
     }),
     pages: defineCollection({
