@@ -111,6 +111,7 @@ defineProps<{
             variant="ghost"
             class="gap-2"
             :to="global.available ? global.meetingLink : ''"
+            target="_blank"
             :label="global.available ? '点击体验AI生图平台' : 'Not available at the moment'"
           >
             <template #leading>

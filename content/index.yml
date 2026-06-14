@@ -8,6 +8,7 @@ hero:
     - label: "源梦工坊AI生图"
       to: https://ai.52ym.vip
       color: "neutral"
+      target: "_blank"
   images:
     - src: /hero/1.jpg
       alt: Random Image 1
