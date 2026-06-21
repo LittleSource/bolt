@@ -5,6 +5,10 @@ export default defineAppConfig({
       light: './avatar.jpg',
       alt: 'My profile picture'
     },
+    github: {
+      username: 'LittleSource',
+      url: 'https://github.com/LittleSource'
+    },
     meetingLink: 'https://ai.52ym.vip',
     email: 'littley@outlook.ie',
     available: true

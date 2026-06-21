@@ -57,5 +57,7 @@ if (!posts.value) {
         </template>
       </UBlogPost>
     </UBlogPosts>
+
+    <GitHubActivity class="mt-12" />
   </UPageSection>
 </template>
